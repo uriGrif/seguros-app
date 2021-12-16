@@ -1,0 +1,2360 @@
+﻿
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: AgendaCompania                                                                              Página: 1
+
+
+
+
+Propiedades
+
+DateCreated:               24/4/2007 16:10:33          DefaultView:               2
+LastUpdated:               27/4/2007 17:36:06          OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               0
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         idCompania                                              Entero largo                             4
+
+         idSeccion                                               Entero largo                             4
+
+         Contacto                                                Texto                                   80
+         Telefono                                                Texto                                   50
+
+         Email                                                   Texto                                   80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Asegurados                                                                                  Página: 2
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeThemeC        -1
+
+DatasheetGridlinesThe      -1                          DateCreated:               26/2/2007 22:31:01
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {10F5E964-A092-
+                                                                                  471B-AE3A-
+
+HideNewField:              Falso                       LastUpdated:               4/9/2019 11:35:53
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+RecordCount:               4963                        ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         Id                                                      Entero largo                             4
+
+         Asegurado                                               Texto                                  255
+         TipoPersona                                             Texto                                    1
+
+         NombreContacto                                          Texto                                  100
+
+         Sexo                                                    Texto                                    1
+
+         FechaNacimiento                                         Fecha/Hora                               8
+         Cuit                                                    Texto                                   11
+
+         Documento                                               Texto                                   20
+
+         Domicilio                                               Texto                                  255
+
+         Localidad                                               Texto                                   50
+
+         CodPostal                                               Texto                                   10
+         TelefonoLaboral                                         Memo                                     -
+
+         TelefonoParticular                                      Memo                                     -
+
+         Celular                                                 Texto                                  100
+
+         Email1                                                  Texto                                  100
+         Email2                                                  Texto                                  100
+
+         Observaciones                                           Memo                                     -
+
+         Patrimoniales                                           Sí/No                                    1
+
+         ART                                                     Sí/No                                    1
+         Capitas                                                 Entero                                   2
+
+         Siniestros                                              Entero                                   2
+
+         ValorAsegurado                                          Decimal                                 16
+
+         RD_TipoPersona                                          Byte                                     1
+         RD_TipoContacto                                         Byte                                     1
+
+         RD_TipoDocumento                                        Byte                                     1
+
+         RD_Documento                                            Texto                                   20
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Asegurados                                                                                  Página: 3
+
+
+         FechaRegistro                                           Fecha/Hora                               8
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        AseguradosPolizas
+
+                           Asegurados                           Polizas
+
+                    Id                        1       ¥  idAsegurado
+
+
+
+                 Attributes:                 Forzado; Actualizaciones en cascada
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Cobertura                                                                                   Página: 4
+
+
+
+
+Propiedades
+
+DateCreated:               23/4/2007 23:36:20          DefaultView:               2
+LastUpdated:               10/10/2007 21:37:06         OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               26167
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         idPoliza                                                Entero largo                             4
+
+         idRiesgo                                                Entero largo                             4
+
+         ValorAsegurado                                          Decimal                                 16
+         Observaciones                                           Memo                                     -
+
+         Endoso                                                  Byte                                     1
+
+         Prima                                                   Doble                                    8
+
+         Premio                                                  Doble                                    8
+
+         Fecha                                                   Fecha/Hora                               8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Compania                                                                                    Página: 5
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeThemeC        -1
+
+DatasheetGridlinesThe      -1                          DateCreated:               26/2/2007 22:31:01
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {D65E481A-E28F-
+                                                                                  4F51-9C6E-
+
+HideNewField:              Falso                       LastUpdated:               4/9/2019 11:35:53
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+RecordCount:               13                          ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         Id                                                      Entero largo                             4
+
+         Compania                                                Texto                                  255
+         Contacto1                                               Texto                                  100
+
+         Domicilio                                               Texto                                  255
+
+         Localidad                                               Texto                                   50
+
+         CodigoPostal                                            Texto                                   10
+         Telefono1                                               Texto                                   50
+
+         Email1                                                  Texto                                  100
+
+         Contacto2                                               Texto                                  100
+
+         Telefono2                                               Texto                                   50
+
+         Email2                                                  Texto                                  100
+         PaginaWeb                                               Texto                                  200
+
+         Usuario                                                 Texto                                   50
+
+         Password                                                Texto                                   50
+
+         Comision                                                Decimal                                 16
+         rd_id                                                   Entero                                   2
+
+
+
+
+
+
+
+
+Relaciones
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Compania                                                                                    Página: 6
+
+
+
+        CompaniaPolizas
+
+                            Compania                            Polizas
+
+
+                    Id                        1       ¥  idCompania
+
+
+                 Attributes:                 Forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: CompProd                                                                                    Página: 7
+
+
+
+
+Propiedades
+
+DateCreated:               27/4/2007 22:40:14          DefaultView:               2
+LastUpdated:               27/4/2007 22:40:14          OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               0
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         idCompania                                              Entero largo                             4
+
+         idProductor                                             Entero largo                             4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: LOG_Asegurados                                                                              Página: 8
+
+
+
+
+Propiedades
+
+DateCreated:               28/4/2007 09:45:57          DefaultView:               2
+LastUpdated:               28/4/2007 09:46:53          NameMap:                   Datos binarios largos
+OrderByOn:                 Falso                       Orientation:               De izquieda a derecha
+
+RecordCount:               0                           Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         Asegurado                                               Texto                                  255
+
+         TipoPersona                                             Texto                                    1
+
+         NombreContacto                                          Texto                                  100
+         Sexo                                                    Texto                                    1
+
+         FechaNacimiento                                         Fecha/Hora                               8
+
+         Cuit                                                    Texto                                   11
+
+         Documento                                               Texto                                   20
+
+         Domicilio                                               Texto                                  255
+         Localidad                                               Texto                                   50
+
+         CodPostal                                               Texto                                   10
+
+         TelefonoLaboral                                         Texto                                   50
+
+         TelefonoParticular                                      Texto                                   50
+         Celular                                                 Texto                                   50
+
+         Email1                                                  Texto                                  100
+
+         Email2                                                  Texto                                  100
+
+         Observaciones                                           Memo                                     -
+         Patrimoniales                                           Sí/No                                    1
+
+         ART                                                     Sí/No                                    1
+
+         Capitas                                                 Entero                                   2
+
+         Siniestros                                              Entero                                   2
+         ValorAsegurado                                          Simple                                   4
+
+         FechaMovimiento                                         Fecha/Hora                               8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: LOG_Polizas                                                                                 Página: 9
+
+
+
+
+Propiedades
+
+DateCreated:               28/4/2007 09:42:07          DefaultView:               2
+LastUpdated:               28/4/2007 09:45:46          NameMap:                   Datos binarios largos
+OrderByOn:                 Falso                       Orientation:               De izquieda a derecha
+
+RecordCount:               0                           Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         id                                                      Entero largo                             4
+
+         FechaSolicitud                                          Fecha/Hora                               8
+
+         f_Inicio                                                Fecha/Hora                               8
+
+         f_Vencimiento                                           Fecha/Hora                               8
+         NroPoliza                                               Texto                                   35
+
+         idAsegurado                                             Entero largo                             4
+
+         Observaciones                                           Memo                                     -
+
+         Prima                                                   Doble                                    8
+
+         Premio                                                  Doble                                    8
+         Comision                                                Decimal                                 16
+
+         idSeccion                                               Entero largo                             4
+
+         idCompania                                              Entero largo                             4
+
+         idProductor                                             Entero largo                             4
+         idVigencia                                              Entero largo                             4
+
+         idMPago                                                 Entero largo                             4
+
+         Art                                                     Sí/No                                    1
+
+         Patrimoniales                                           Sí/No                                    1
+         Capitas                                                 Entero largo                             4
+
+         Siniestros                                              Entero largo                             4
+
+         PatenteVehiculo                                         Texto                                   10
+
+         ValorAsegurado                                          Decimal                                 16
+         RAutomatica                                             Sí/No                                    1
+
+         Baja                                                    Sí/No                                    1
+
+         MotivoBaja                                              Byte                                     1
+
+         FechaMovimiento                                         Fecha/Hora                               8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: MediosDePago                                                                               Página: 10
+
+
+
+
+Propiedades
+
+DateCreated:               12/4/2007 00:58:58          DefaultView:               2
+GUID:                      {guid {87ECA44B-            LastUpdated:               12/4/2007 01:03:20
+                           99C9-4CC7-B29D-
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+
+Orientation:               De izquieda a derecha       RecordCount:               7
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         Id                                                      Entero largo                             4
+
+         Descripcion                                             Texto                                   50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Meses                                                                                      Página: 11
+
+
+
+
+Propiedades
+
+DateCreated:               24/4/2007 04:36:17          DefaultView:               2
+LastUpdated:               24/4/2007 04:36:17          OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               12
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         Mes                                                     Texto                                   11
+
+         Mes3                                                    Texto                                    3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: MotivosBaja                                                                                Página: 12
+
+
+
+
+Propiedades
+
+DateCreated:               23/4/2007 23:45:54          DefaultView:               2
+LastUpdated:               23/4/2007 23:45:54          OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               8
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         MotivoBaja                                              Texto                                   50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: MSysCompactError                                                                           Página: 13
+
+
+
+
+Propiedades
+
+DateCreated:               28/10/2018 20:40:42         LastUpdated:               28/10/2018 20:40:42
+LogTable:                  1                           RecordCount:               1
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         ErrorCode                                               Entero largo                             4
+
+         ErrorDescription                                        Memo                                     -
+
+         ErrorRecid                                              Binario                                510
+         ErrorTable                                              Texto                                  255
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: ParSis                                                                                     Página: 14
+
+
+
+
+Propiedades
+
+DateCreated:               8/5/2007 22:18:58           DefaultView:               2
+LastUpdated:               8/5/2007 22:19:30           OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               1
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Usuario                                                 Texto                                   50
+
+         Productores                                             Texto                                  100
+
+         Direccion                                               Texto                                   80
+
+         Localidad                                               Texto                                   50
+         Telefono                                                Texto                                   50
+
+         Celular                                                 Texto                                   50
+
+         email1                                                  Texto                                   50
+
+         email2                                                  Texto                                   50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Polizas                                                                                    Página: 15
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeThemeC        -1
+
+DatasheetGridlinesThe      -1                          DateCreated:               26/2/2007 22:31:01
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {AB99A2DF-0649-
+                                                                                  408F-8E54-
+
+HideNewField:              Falso                       LastUpdated:               4/9/2019 11:35:53
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+RecordCount:               17430                       ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Entero largo                             4
+
+         FechaSolicitud                                          Fecha/Hora                               8
+         f_Inicio                                                Fecha/Hora                               8
+
+         f_Vencimiento                                           Fecha/Hora                               8
+
+         NroPoliza                                               Texto                                   35
+
+         idAsegurado                                             Entero largo                             4
+         Observaciones                                           Memo                                     -
+
+         Prima                                                   Doble                                    8
+
+         Premio                                                  Doble                                    8
+
+         Comision                                                Decimal                                 16
+
+         idSeccion                                               Entero largo                             4
+         idCompania                                              Entero largo                             4
+
+         idProductor                                             Entero largo                             4
+
+         idVigencia                                              Entero largo                             4
+
+         idMPago                                                 Entero largo                             4
+         Art                                                     Sí/No                                    1
+
+         Patrimoniales                                           Sí/No                                    1
+
+         Capitas                                                 Entero largo                             4
+
+         Siniestros                                              Entero largo                             4
+         PatenteVehiculo                                         Texto                                  150
+
+         ValorAsegurado                                          Decimal                                 16
+
+         RAutomatica                                             Sí/No                                    1
+
+         Baja                                                    Sí/No                                    1
+         MotivoBaja                                              Byte                                     1
+
+         FechaRegistro                                           Fecha/Hora                               8
+
+         RD_idCompania                                           Entero                                   2
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Polizas                                                                                    Página: 16
+
+
+         RD_idSeccion                                            Byte                                     1
+         idSeccion_bak                                           Entero largo                             4
+
+         idCompania_bak                                          Entero largo                             4
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        CompaniaPolizas
+
+
+                            Compania                            Polizas
+
+                    Id                        1       ¥  idCompania
+
+
+
+                 Attributes:                 Forzado
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+        AseguradosPolizas
+
+                           Asegurados                           Polizas
+
+
+                    Id                        1       ¥  idAsegurado
+
+
+                 Attributes:                 Forzado; Actualizaciones en cascada
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+        VigenciaPolizas
+
+                            Vigencia                            Polizas
+
+                    Id                        1       ¥  idVigencia
+
+
+
+                 Attributes:                 Forzado; Actualizaciones en cascada
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Polizas                                                                                    Página: 17
+
+
+
+        SeccionPolizas
+
+                             Seccion                            Polizas
+
+
+                    Id                        1       ¥  idSeccion
+
+
+                 Attributes:                 Forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Productores                                                                                Página: 18
+
+
+
+
+Propiedades
+
+DateCreated:               27/4/2007 22:08:43          DefaultView:               2
+LastUpdated:               27/4/2007 22:35:29          OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               3
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         Asegurador                                              Texto                                   80
+
+         Matricula                                               Entero largo                             4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_Companias                                                                               Página: 19
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeThemeC        -1
+
+DatasheetGridlinesThe      -1                          DateCreated:               3/5/2017 10:28:39
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       HideNewField:              Falso
+
+LastUpdated:               3/5/2017 10:28:39           OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+RecordCount:               883                         ThemeFontIndex:            -1
+
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Entero                                   2
+         denominacion                                            Texto                                  255
+
+         DenominacionCorta                                       Texto                                   35
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_Monedas                                                                                 Página: 20
+
+
+
+
+Propiedades
+
+DateCreated:               3/5/2017 10:28:39           LastUpdated:               3/5/2017 10:28:39
+RecordCount:               10                          Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Byte                                     1
+         descripcion                                             Texto                                   45
+
+         signo                                                   Texto                                    3
+
+         activa                                                  Texto                                    2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_Operaciones                                                                             Página: 21
+
+
+
+
+Propiedades
+
+DateCreated:               3/5/2017 10:28:39           LastUpdated:               3/5/2017 10:28:39
+RecordCount:               4                           Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Byte                                     1
+         descripcion                                             Texto                                   45
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_Ramos                                                                                   Página: 22
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeThemeC        -1
+
+DatasheetGridlinesThe      -1                          DateCreated:               3/5/2017 10:28:39
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       HideNewField:              Falso
+
+LastUpdated:               3/5/2017 10:28:39           OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+RecordCount:               30                          ThemeFontIndex:            -1
+
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Byte                                     1
+         descripcion                                             Texto                                   65
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_TipoContacto                                                                            Página: 23
+
+
+
+
+Propiedades
+
+DateCreated:               3/5/2017 10:28:39           LastUpdated:               3/5/2017 10:28:39
+RecordCount:               4                           Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Byte                                     1
+         descripcion                                             Texto                                   45
+
+         activa                                                  Texto                                    2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_TipoDocumento                                                                           Página: 24
+
+
+
+
+Propiedades
+
+DateCreated:               3/5/2017 10:28:39           LastUpdated:               3/5/2017 10:28:39
+RecordCount:               6                           Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Byte                                     1
+         descripcion                                             Texto                                   45
+
+         activa                                                  Texto                                    2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_TipoPersona                                                                             Página: 25
+
+
+
+
+Propiedades
+
+DateCreated:               3/5/2017 10:28:39           LastUpdated:               3/5/2017 10:28:39
+RecordCount:               2                           Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Byte                                     1
+         descripcion                                             Texto                                   45
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: RD_TipoRegistro                                                                            Página: 26
+
+
+
+
+Propiedades
+
+DateCreated:               3/5/2017 10:28:39           LastUpdated:               3/5/2017 10:28:39
+RecordCount:               3                           Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         id                                                      Byte                                     1
+         descripcion                                             Texto                                   45
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Riesgos                                                                                    Página: 27
+
+
+
+
+Propiedades
+
+DateCreated:               21/6/2007 10:21:54          DefaultView:               2
+LastUpdated:               21/6/2007 10:47:13          OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               97
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         Riesgo                                                  Texto                                  100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Seccion                                                                                    Página: 28
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeThemeC        -1
+
+DatasheetGridlinesThe      -1                          DateCreated:               26/2/2007 22:31:01
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {F643EC6D-54F0-
+                                                                                  47A4-B24D-
+
+HideNewField:              Falso                       LastUpdated:               4/9/2019 11:35:53
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+RecordCount:               27                          ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         Id                                                      Entero largo                             4
+
+         Seccion                                                 Texto                                  255
+         rd_id                                                   Byte                                     1
+
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        SeccionPolizas
+
+                             Seccion                            Polizas
+
+                    Id                        1       ¥  idSeccion
+
+
+
+                 Attributes:                 Forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Siniestros                                                                                 Página: 29
+
+
+
+
+Propiedades
+
+DateCreated:               23/4/2007 23:41:12          DefaultView:               2
+LastUpdated:               8/5/2007 01:08:43           OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               16
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Id                                                      Entero largo                             4
+
+         idPoliza                                                Entero largo                             4
+
+         Fecha                                                   Fecha/Hora                               8
+
+         Observacion_Siniestro                                   Memo                                     -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Tabla1                                                                                     Página: 30
+
+
+
+
+Propiedades
+
+DateCreated:               21/6/2007 10:35:36          DefaultView:               2
+LastUpdated:               21/6/2007 10:36:34          OrderByOn:                 Falso
+Orientation:               De izquieda a derecha       RecordCount:               30
+
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+         Riesgo                                                  Texto                                  100
+
+         NuevaDescripcion                                        Texto                                  100
+
+         Codigo                                                  Entero largo                             4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\Users\Alejandro Grifman\Desktop\Uriel\MAS_Datos.mdb                           sábado, 24 de julio de 2021
+ Tabla: Vigencia                                                                                   Página: 31
+
+
+
+
+Propiedades
+
+DateCreated:               26/2/2007 22:31:01          DefaultView:               2
+GUID:                      {guid {FFE82A85-B8A5-       LastUpdated:               4/9/2019 11:35:53
+                           47F9-950B-
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+
+Orientation:               De izquieda a derecha       RecordCount:               7
+Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tip                        Tamaño
+
+
+         Id                                                      Entero largo                             4
+
+         Vigencia                                                Texto                                  255
+         Meses                                                   Entero                                   2
+
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        VigenciaPolizas
+
+                            Vigencia                            Polizas
+
+                    Id                        1       ¥  idVigencia
+
+
+
+                 Attributes:                 Forzado; Actualizaciones en cascada
+                 RelationshipType:           Uno a varios
+

@@ -1,0 +1,17 @@
+.myButton {
+	border-radius: 3px;
+	border: var(--var-blanco) solid 1px;
+	background-color: var(--var-blanco);
+	color: var(--var-azul);
+	font-weight: 600;
+	padding: 5px 10px;
+	font-size: 16px;
+	font-family: inherit;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.myButton:hover {
+		box-shadow: 1px 1px 10px -2px var(--var-gris);
+		cursor: pointer;
+	}
+}

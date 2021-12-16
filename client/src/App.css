@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+
+:root {
+	--var-azul: #1f3541;
+	--var-gris: #eeeeee;
+	--var-blanco: #ffffff;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+@media (min-width: 769px) {
+	.globalContainer {
+		margin-left: 40px;
+		padding: 20px;
+	}
+
+	.searchForm input {
+		width: 25%;
+	}
+}
+
+@media (max-width: 768px) {
+	.globalContainer {
+		margin-left: 0px;
+		padding: 20px;
+	}
+
+	.searchForm {
+		margin-top: 30px !important;
+	}
+}
+
+h1,
+h4 {
+	margin: 0;
+}
+
+.cuadradoAzul {
+	border-radius: 3px;
+	background-color: var(--var-azul);
+	color: var(--var-blanco);
+	padding: 20px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+	max-width: 80vw;
+	margin: auto;
+}
+
+.cuadradoGris {
+	border-radius: 3px;
+	background-color: var(--var-gris);
+	color: var(--var-azul);
+	padding: 20px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+	max-width: 80vw;
+	margin: auto;
+}
+
+.searchForm {
+	display: grid;
+}
+
+.searchForm button {
+	margin-left: auto;
+}
+
+.searchForm input {
+	margin-right: 5px !important;
+}
+
+input,
+textarea,
+select {
+	border-radius: 3px;
+	border: var(--var-blanco) solid 1px;
+	padding: 5px;
+	font-size: 16px;
+	margin: 10px 0;
+	font-family: "Roboto", sans-serif;
+}
+
+.resultadosLista {
+	margin: auto;
+}
+
+.resultadosLista h2 {
+	text-align: center;
+}
+
+.searchResultItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	margin-bottom: 20px;
+}

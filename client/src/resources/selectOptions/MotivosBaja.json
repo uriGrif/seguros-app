@@ -1,0 +1,71 @@
+[
+	{
+		"_id": { "$oid": "61b950fef40b0b8da3f62172" },
+		"MotivoBaja": "Ninguna",
+		"text": "Ninguna"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b880b"
+		},
+		"Id": 2,
+		"MotivoBaja": "CAMBIO RAZON SOCIAL",
+		"text": "CAMBIO RAZON SOCIAL"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b880c"
+		},
+		"Id": 3,
+		"MotivoBaja": "VENCIMIENTO",
+		"text": "VENCIMIENTO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b880d"
+		},
+		"Id": 4,
+		"MotivoBaja": "POLIZA IMPAGA",
+		"text": "POLIZA IMPAGA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b880e"
+		},
+		"Id": 5,
+		"MotivoBaja": "VENTA UNIDAD",
+		"text": "VENTA UNIDAD"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b880f"
+		},
+		"Id": 6,
+		"MotivoBaja": "REEMPLAZO",
+		"text": "REEMPLAZO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b8810"
+		},
+		"Id": 7,
+		"MotivoBaja": "RESCISION",
+		"text": "RESCISION"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b8811"
+		},
+		"Id": 8,
+		"MotivoBaja": "CAMBIO IVA",
+		"text": "CAMBIO IVA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b8812"
+		},
+		"Id": 9,
+		"MotivoBaja": "ROBO TOTAL",
+		"text": "ROBO TOTAL"
+	}
+]

@@ -1,0 +1,65 @@
+[
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd7"
+		},
+		"Id": 1,
+		"Vigencia": "Anual",
+		"text": "Anual",
+		"Meses": 12
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd8"
+		},
+		"Id": 2,
+		"Vigencia": "Trienal (3 a\u00f1os)",
+		"text": "Trienal (3 a\u00f1os)",
+		"Meses": 36
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd9"
+		},
+		"Id": 3,
+		"Vigencia": "Cuatrimestral",
+		"text": "Cuatrimestral",
+		"Meses": 4
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccda"
+		},
+		"Id": 4,
+		"Vigencia": "Semestral",
+		"text": "Semestral",
+		"Meses": 6
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccdb"
+		},
+		"Id": 5,
+		"Vigencia": "Trimestral",
+		"text": "Trimestral",
+		"Meses": 3
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccdc"
+		},
+		"Id": 6,
+		"Vigencia": "Mensual",
+		"text": "Mensual",
+		"Meses": 1
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccdd"
+		},
+		"Id": 7,
+		"Vigencia": "Diaria",
+		"text": "Diaria",
+		"Meses": 0
+	}
+]

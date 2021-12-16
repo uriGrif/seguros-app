@@ -1,0 +1,245 @@
+[
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccba"
+		},
+		"Id": 1,
+		"Seccion": "ACCIDENTES PERSONALES",
+		"text": "ACCIDENTES PERSONALES",
+		"rd_id": 38
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccbb"
+		},
+		"Id": 2,
+		"Seccion": "ART",
+		"text": "ART",
+		"rd_id": 59
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccbc"
+		},
+		"Id": 3,
+		"Seccion": "AUTO SCORING",
+		"text": "AUTO SCORING",
+		"rd_id": 32
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccbd"
+		},
+		"Id": 4,
+		"Seccion": "AUTOMOTOR",
+		"text": "AUTOMOTOR",
+		"rd_id": 32
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccbe"
+		},
+		"Id": 5,
+		"Seccion": "AUTOMOTOR - FLOTA",
+		"text": "AUTOMOTOR - FLOTA",
+		"rd_id": 32
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccbf"
+		},
+		"Id": 6,
+		"Seccion": "CASCO",
+		"text": "CASCO",
+		"rd_id": 46
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc0"
+		},
+		"Id": 7,
+		"Seccion": "CAUCION",
+		"text": "CAUCION",
+		"rd_id": 39
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc1"
+		},
+		"Id": 8,
+		"Seccion": "COMBINADO FAMILIAR",
+		"text": "COMBINADO FAMILIAR",
+		"rd_id": 31
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc2"
+		},
+		"Id": 9,
+		"Seccion": "CONVENIO MERCANTIL",
+		"text": "CONVENIO MERCANTIL",
+		"rd_id": 55
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc3"
+		},
+		"Id": 10,
+		"Seccion": "INCENDIO",
+		"text": "INCENDIO",
+		"rd_id": 30
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc4"
+		},
+		"Id": 11,
+		"Seccion": "INTEGRAL DE COMERCIO",
+		"text": "INTEGRAL DE COMERCIO",
+		"rd_id": 31
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc5"
+		},
+		"Id": 12,
+		"Seccion": "INTEGRAL DE CONSORCIO",
+		"text": "INTEGRAL DE CONSORCIO",
+		"rd_id": 31
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc6"
+		},
+		"Id": 13,
+		"Seccion": "MOTO",
+		"text": "MOTO",
+		"rd_id": 46
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc7"
+		},
+		"Id": 14,
+		"Seccion": "RC CARTEL",
+		"text": "RC CARTEL",
+		"rd_id": 36
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc8"
+		},
+		"Id": 15,
+		"Seccion": "RC COMPRENSIVA",
+		"text": "RC COMPRENSIVA",
+		"rd_id": 36
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccc9"
+		},
+		"Id": 16,
+		"Seccion": "RC CONSTRUCCION",
+		"text": "RC CONSTRUCCION",
+		"rd_id": 36
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccca"
+		},
+		"Id": 17,
+		"Seccion": "RC MALA PRAXIS",
+		"text": "RC MALA PRAXIS",
+		"rd_id": 36
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcccb"
+		},
+		"Id": 18,
+		"Seccion": "RESPONSABILIDAD CIVIL",
+		"text": "RESPONSABILIDAD CIVIL",
+		"rd_id": 36
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcccc"
+		},
+		"Id": 19,
+		"Seccion": "SEGURO TECNICO",
+		"text": "SEGURO TECNICO",
+		"rd_id": 44
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcccd"
+		},
+		"Id": 20,
+		"Seccion": "TRANSPORTE",
+		"text": "TRANSPORTE",
+		"rd_id": 45
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccce"
+		},
+		"Id": 21,
+		"Seccion": "TRANSPORTE TERRESTRE",
+		"text": "TRANSPORTE TERRESTRE",
+		"rd_id": 45
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcccf"
+		},
+		"Id": 22,
+		"Seccion": "VIDA CONTRATO TRABAJO",
+		"text": "VIDA CONTRATO TRABAJO",
+		"rd_id": 55
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd0"
+		},
+		"Id": 23,
+		"Seccion": "VIDA OBLIGATORIO",
+		"text": "VIDA OBLIGATORIO",
+		"rd_id": 55
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd1"
+		},
+		"Id": 24,
+		"Seccion": "VIDA OBLIGATORIO RURAL",
+		"text": "VIDA OBLIGATORIO RURAL",
+		"rd_id": 56
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd2"
+		},
+		"Id": 25,
+		"Seccion": "VIDA MODULAR",
+		"text": "VIDA MODULAR",
+		"rd_id": 55
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd3"
+		},
+		"Id": 26,
+		"Seccion": "VIDA",
+		"text": "VIDA",
+		"rd_id": 55
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd4"
+		},
+		"Id": 27,
+		"Seccion": "ROBO",
+		"text": "ROBO",
+		"rd_id": 37
+	}
+]

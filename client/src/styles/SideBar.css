@@ -1,0 +1,169 @@
+@media (min-width: 769px) {
+	.sideBar {
+		background-color: var(--var-azul);
+		color: var(--var-blanco);
+		font-weight: lighter;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 20px;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		transition: width 0.3s ease-out;
+		z-index: 15;
+	}
+
+	.sideBar i {
+		font-size: 20px;
+		margin: 0px 10px;
+	}
+
+	.linkList {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		height: 20vh;
+		margin-top: 100px;
+		transform: translateX(-25%);
+	}
+
+	.sideBarOpen {
+		width: 20vw !important;
+		transition: width 0.3s ease-out;
+		display: flex;
+		flex-direction: column;
+		max-width: 200px;
+	}
+
+	.sideBarOpen .linkList {
+		width: 100%;
+		transform: translateX(0px);
+	}
+
+	.sideBarOpen i {
+		margin: 0px 10px 0px 0px;
+	}
+
+	#sideBarBurguer {
+		margin-left: auto;
+	}
+
+	#sideBarBurguer:hover {
+		cursor: pointer;
+	}
+
+	.navItem {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 10px 0;
+	}
+
+	.fa-file-alt {
+		padding: 0px 3px;
+	}
+
+	.sideBarTitle {
+		animation: 0.3s entrada ease-out;
+		margin: 0px;
+	}
+
+	@keyframes entrada {
+		0% {
+			opacity: 0;
+			transform: translateX(-200px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+	}
+
+	.backgroundDark {
+		height: 100vh;
+		width: 100vw;
+		background-color: rgb(0, 0, 0);
+		opacity: 0.25;
+		animation: 0.3s entradaBackgroundNegro ease-out;
+		position: absolute;
+		z-index: 14;
+		top: 0;
+	}
+
+	@keyframes entradaBackgroundNegro {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0.25;
+		}
+	}
+
+	.navItemSelected {
+		background-color: var(--var-blanco);
+		color: var(--var-azul);
+	}
+}
+
+.navItemSelected2 {
+	font-weight: 1000;
+}
+
+@media (max-width: 768px) {
+	.sideBar {
+		width: 0px;
+		height: 0px;
+		color: var(--var-azul);
+		transition: all 0.3s ease-out;
+	}
+
+	#sideBarBurguer {
+		position: fixed;
+		right: 10px;
+		top: 10px;
+	}
+
+	.linkList {
+		display: none;
+	}
+
+	.sideBar i {
+		font-size: 20px;
+	}
+
+	.sideBarOpen {
+		width: 100vw;
+		height: 100vh;
+		transition: all 0.3s ease-out;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--var-azul);
+		color: var(--var-blanco);
+		align-items: center;
+		position: fixed;
+		top: 0;
+		font-weight: lighter;
+	}
+
+	.sideBarOpen .linkList {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		margin-top: 100px;
+	}
+
+	.navItem {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 10px 0;
+		justify-content: center;
+	}
+
+	.navItem i {
+		margin: 0px 10px;
+	}
+}

@@ -1,0 +1,153 @@
+Asegurados -
+
+  aprox. 5000 registros
+  elimino capitas, siniestros, TipoPersona, RD_TipoContacto, RD_TipoDocumento, RD_Documento
+  
+  cambio "RD_TipoPersona" a TipoPersona
+
+	- Id					num
+	- Asegurado				text
+	- TipoPersona			num		FK
+	- NombreContacto		text
+	- Sexo					text
+	- FechaNacimiento		date
+	- Cuit					text
+	- Documento				text
+	- Domicilio				text
+	- Localidad				text
+	- CodPostal				text
+	- TelefonoLaboral		text
+	- TelefonoParticular	text
+	- Celular				text
+	- Email1				text
+	- Email2				text
+	- Observaciones			text
+	- Patrimoniales			bool
+	- ART 					bool
+	- FechaRegistro			date
+	- ValorAsegurado		num (medio inutil, salvo x algunos registros)
+	
+Polizas -
+
+  aprox 18.000 registros
+  
+  eliminadas: RD_idCompania, RD_idSeccion, idSeccion_bak, idCompania_bak
+  
+  cambio de MotivoBaja a idMotivoBaja
+  
+  agrego campo NombreAsegurado (para evitar join en mongo)
+    
+	Id               Entero
+    FechaSolicitud   Fecha/Hora  
+    f_Inicio         Fecha/Hora  
+    f_Vencimiento    Fecha/Hora  
+    NroPoliza        Texto       
+    idAsegurado      Entero			FK
+	NombreAsegurado  Texto			FK?
+    Observaciones    text       	
+    Prima            Doble      	
+    Premio           Doble      	
+    Comision         Decimal    	
+    idSeccion        Entero			FK
+    idCompania       Entero     	FK
+    idProductor      Entero     	FK
+    idVigencia       Entero     	FK
+    idMPago          Entero     	FK
+    Art              Sí/No       
+    Patrimoniales    Sí/No       
+    Capitas          Entero
+    Siniestros       Entero
+    PatenteVehiculo  Texto       
+    ValorAsegurado   Decimal     
+    RAutomatica      Sí/No       
+    Baja             Sí/No       
+    idMotivoBaja       Byte       	FK
+    FechaRegistro    Fecha/Hora 
+	
+	
+Coberturas - (cambio de nombre Cobertura)
+
+  aprox 26.000 registros
+  
+  eliminadas: ValorAsegurado
+
+	- Id				num      
+	- idPoliza			num      FK
+	- idRiesgo			num      FK
+	- Observaciones 	text
+	- Endoso			num
+	- Prima				num
+	- Premio			num
+	- Fecha				date
+
+Companias - (cambio de nombre Compania)
+
+	eliminadas: Contacto1, Domicilio, Localidad, CodigoPostal, Telefono1, Email1, Contacto2, Telefono2, Email2, PaginaWeb, Usuario, Password, Comision, rd_id
+
+	Id              num
+    Compania        text
+
+MediosDePago -
+
+	- Id
+	- Descripcion
+
+Meses -
+
+	- Id
+	- Mes
+
+MotivosBaja -
+
+	- Id
+	- MotivoBaja
+
+
+Productores -
+
+	- Id
+	- Asegurador
+	- Matricula
+
+RD_Companias - INNECESARIA
+
+	- id
+	- denominacion
+	- DenominacionCorta
+
+RD_Operaciones - INNECESARIA
+
+	- id
+	- descripcion
+
+RD_Ramos - INNECESARIA
+
+	- id
+	- descripcion
+
+TiposPersona - (cambio nombre de RD_TipoPersona e "id" por "Id")
+
+	- Id
+	- descripcion
+
+RD_TipoRegistro - INNECESARIA
+
+	- id
+	- descripcion
+
+Riesgos -
+
+	- Id
+	- Riesgo
+
+Secciones - (cambio nombre de Seccion)
+
+	- Id
+	- Seccion
+	- rd_id
+
+Vigencias - (cambio nombre de Vigencia)
+
+	- Id
+	- Vigencia
+	- Meses

@@ -1,0 +1,80 @@
+.Modal {
+	margin-top: 5vh;
+	width: 75vw;
+	height: 80vh;
+	z-index: 99999;
+}
+
+.Modal h2 {
+	text-align: center;
+}
+
+.overlay {
+	background-color: rgba(255, 255, 255, 0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.formFields {
+		grid-template-columns: 1fr;
+		overflow-y: scroll;
+		height: 80%;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.formFields {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.formFields {
+	display: grid;
+	gap: 20px;
+	align-items: center;
+	justify-items: center;
+}
+
+.formFields .inputField {
+	display: flex;
+	width: -webkit-fill-available;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inputField input,
+textarea {
+	width: 60%;
+}
+
+form {
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.modalEliminar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.modalEliminar button {
+	margin: 0 20px;
+}

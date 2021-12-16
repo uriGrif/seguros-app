@@ -1,0 +1,106 @@
+[
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87eb"
+		},
+		"Id": 1,
+		"Compania": "ALLIANZ",
+		"text": "ALLIANZ"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87ec"
+		},
+		"Id": 2,
+		"Compania": "EXPERTA ART",
+		"text": "EXPERTA ART"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87ed"
+		},
+		"Id": 3,
+		"Compania": "FEDERACION PATRONAL",
+		"text": "FEDERACION PATRONAL"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87ee"
+		},
+		"Id": 4,
+		"Compania": "ZURICH",
+		"text": "ZURICH"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87ef"
+		},
+		"Id": 5,
+		"Compania": "HDI SEGUROS",
+		"text": "HDI SEGUROS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f0"
+		},
+		"Id": 6,
+		"Compania": "LA HOLANDO ART",
+		"text": "LA HOLANDO ART"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f1"
+		},
+		"Id": 7,
+		"Compania": "LA HOLANDO",
+		"text": "LA HOLANDO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f2"
+		},
+		"Id": 8,
+		"Compania": "LBA NEW YORK LIFE",
+		"text": "LBA NEW YORK LIFE"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f3"
+		},
+		"Id": 9,
+		"Compania": "LIBERTY",
+		"text": "LIBERTY"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f4"
+		},
+		"Id": 10,
+		"Compania": "SMG ART",
+		"text": "SMG ART"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f5"
+		},
+		"Id": 11,
+		"Compania": "TPC",
+		"text": "TPC"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f6"
+		},
+		"Id": 14,
+		"Compania": "VICTORIA SEGUROS",
+		"text": "VICTORIA SEGUROS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f7"
+		},
+		"Id": 15,
+		"Compania": "LA PERSEVERANCIA",
+		"text": "LA PERSEVERANCIA"
+	}
+]

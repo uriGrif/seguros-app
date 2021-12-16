@@ -1,0 +1,366 @@
+AgendaCompania
+
+	- Id			num
+	- idCompania	num
+	- idSeccion		num
+	- Contacto		text
+	- Telefono		text
+	- Email			text
+
+Asegurados    
+
+	- Id					num
+	- Asegurado				text
+	- TipoPersona			text
+	- NombreContacto		text
+	- Sexo					text
+	- FechaNacimiento		date
+	- Cuit					text
+	- Documento				text
+	- Domicilio				text
+	- Localidad				text
+	- CodPostal				text
+	- TelefonoLaboral		text
+	- TelefonoParticular	text
+	- Celular				text
+	- Email1				text
+	- Email2				text
+	- Observaciones			text
+	- Patrimoniales			bool
+	- ART 					bool
+	- Capitas				num
+	- Siniestros			num
+	- ValorAsegurado		num
+	- RD_TipoPersona		num
+	- RD_TipoContacto		num
+	- RD_TipoDocumento		num
+	- RD_Documento			num
+	- FechaRegistro			date
+
+Cobertura
+
+	- Id				num
+	- idPoliza			num
+	- idRiesgo			num
+	- ValorAsegurado 	num
+	- Observaciones 	text
+	- Endoso			num
+	- Prima				Premio
+	- Fecha				date
+
+Compania
+
+	Id                       Entero largo        4
+
+    Compania                 Texto             255
+    Contacto1                Texto             100
+
+    Domicilio                Texto             255
+
+    Localidad                Texto              50
+
+    CodigoPostal             Texto              10
+    Telefono1                Texto              50
+
+    Email1                   Texto             100
+
+    Contacto2                Texto             100
+
+    Telefono2                Texto              50
+
+    Email2                   Texto             100
+    PaginaWeb                Texto             200
+
+    Usuario                  Texto              50
+
+    Password                 Texto              50
+
+    Comision                 Decimal            16
+    rd_id                    Entero
+
+CompProd      
+
+	Nombre         Tip                Tamaño
+									
+    Id             Entero largo      4
+									
+    idCompania     Entero largo      4
+									
+    idProductor    Entero largo      4
+
+
+LOG_Asegurados
+
+	Nombre                 Tip              Tamaño
+
+    Id                     Entero largo         4
+
+    Asegurado              Texto              255
+
+    TipoPersona            Texto                1
+
+    NombreContacto         Texto              100
+    Sexo                   Texto                1
+
+    FechaNacimiento        Fecha/Hora           8
+
+    Cuit                   Texto               11
+
+    Documento              Texto               20
+
+    Domicilio              Texto              255
+    Localidad              Texto               50
+
+    CodPostal              Texto               10
+
+    TelefonoLaboral        Texto               50
+
+    TelefonoParticular     Texto               50
+    Celular                Texto               50
+
+    Email1                 Texto              100
+
+    Email2                 Texto              100
+
+    Observaciones          Memo                 -
+    Patrimoniales          Sí/No                1
+
+    ART                    Sí/No                1
+
+    Capitas                Entero               2
+
+    Siniestros             Entero               2
+    ValorAsegurado         Simple               4
+
+    FechaMovimiento        Fecha/Hora           8
+
+
+LOG_Polizas  
+
+	Nombre               Tip              Tamaño
+
+    id                   Entero largo       4
+
+    FechaSolicitud       Fecha/Hora         8
+
+    f_Inicio             Fecha/Hora         8
+
+    f_Vencimiento        Fecha/Hora         8
+    NroPoliza            Texto             35
+
+    idAsegurado          Entero largo       4
+
+    Observaciones        Memo               -
+
+    Prima                Doble              8
+
+    Premio               Doble              8
+    Comision             Decimal           16
+
+    idSeccion            Entero largo       4
+
+    idCompania           Entero largo       4
+
+    idProductor          Entero largo       4
+    idVigencia           Entero largo       4
+
+    idMPago              Entero largo       4
+
+    Art                  Sí/No              1
+
+    Patrimoniales        Sí/No              1
+    Capitas              Entero largo       4
+
+    Siniestros           Entero largo       4
+
+    PatenteVehiculo      Texto             10
+
+    ValorAsegurado       Decimal           16
+    RAutomatica          Sí/No              1
+
+    Baja                 Sí/No              1
+
+    MotivoBaja           Byte               1
+
+    FechaMovimiento      Fecha/Hora         8
+
+ 
+MediosDePago 
+
+	- Id
+	- Descripcion
+
+Meses
+
+	- Id
+	- Mes
+
+MotivosBaja
+
+	- Id
+	- MotivoBaja
+
+
+ParSis
+
+	Nombre           Tip         Tamaño
+
+    Usuario          Texto       50
+
+    Productores      Texto      100
+
+    Direccion        Texto       80
+
+    Localidad        Texto       50
+    Telefono         Texto       50
+
+    Celular          Texto       50
+
+    email1           Texto       50
+
+    email2           Texto       50
+
+
+Polizas
+
+	Nombre              Tip                Tamaño
+
+
+    id                  Entero largo         4
+
+    FechaSolicitud      Fecha/Hora           8
+    f_Inicio            Fecha/Hora           8
+
+    f_Vencimiento       Fecha/Hora           8
+
+    NroPoliza           Texto               35
+
+    idAsegurado         Entero largo         4
+    Observaciones       Memo                 -
+
+    Prima               Doble                8
+
+    Premio              Doble                8
+
+    Comision            Decimal             16
+
+    idSeccion           Entero largo         4
+    idCompania          Entero largo         4
+
+    idProductor         Entero largo         4
+
+    idVigencia          Entero largo         4
+
+    idMPago             Entero largo         4
+    Art                 Sí/No                1
+
+    Patrimoniales       Sí/No                1
+
+    Capitas             Entero largo         4
+
+    Siniestros          Entero largo         4
+    PatenteVehiculo     Texto              150
+
+    ValorAsegurado      Decimal             16
+
+    RAutomatica         Sí/No                1
+
+    Baja                Sí/No                1
+    MotivoBaja          Byte                 1
+
+    FechaRegistro       Fecha/Hora           8
+
+    RD_idCompania       Entero               2
+	
+	RD_idSeccion        Byte                 1
+    idSeccion_bak       Entero largo         4
+
+    idCompania_bak      Entero largo         4
+
+Productores
+
+	- Id
+	- Asegurador
+	- Matricula
+
+RD_Companias
+
+	- id
+	- denominacion
+	- DenominacionCorta
+
+RD_Monedas
+
+	- id
+	- descripcion
+	- signo
+	- activa
+
+RD_Operaciones
+
+	- id
+	- descripcion
+
+RD_Ramos
+
+	- id
+	- descripcion
+
+RD_TipoContacto
+
+	- id
+	- descripcion
+	- activa
+
+RD_TipoDocumento
+
+	- id
+	- descripcion
+	- activa
+
+RD_TipoPersona
+
+	- id
+	- descripcion
+
+RD_TipoRegistro
+
+	- id
+	- descripcion
+
+Riesgos
+
+	- Id
+	- Riesgo
+
+Seccion
+
+	- Id
+	- Seccion
+	- rd_id
+
+Siniestros
+		
+	Nombre                      Tip               Tamaño
+
+    Id                          Entero largo       4
+
+    idPoliza                    Entero largo       4
+
+    Fecha                       Fecha/Hora         8
+
+    Observacion_Siniestro       Memo               -
+
+
+
+Tabla1
+
+	- Riesgo
+	- NuevaDescripcion
+	- Codigo
+
+Vigencia
+
+	- Id
+	- Vigencia
+	- Meses

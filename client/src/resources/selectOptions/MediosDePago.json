@@ -1,0 +1,58 @@
+[
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f8"
+		},
+		"Id": 1,
+		"Descripcion": "Contado - Efectivo",
+		"text": "Contado - Efectivo"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87f9"
+		},
+		"Id": 2,
+		"Descripcion": "Tarjeta de Cr\u00e9dito",
+		"text": "Tarjeta de Cr\u00e9dito"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87fa"
+		},
+		"Id": 3,
+		"Descripcion": "Pago F\u00e1cil",
+		"text": "Pago F\u00e1cil"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87fb"
+		},
+		"Id": 4,
+		"Descripcion": "Transferencia - CBU",
+		"text": "Transferencia - CBU"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87fc"
+		},
+		"Id": 5,
+		"Descripcion": "FORM. AFIP",
+		"text": "FORM. AFIP"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87fd"
+		},
+		"Id": 6,
+		"Descripcion": "Cheques diferidos",
+		"text": "Cheques diferidos"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778b87fe"
+		},
+		"Id": 7,
+		"Descripcion": "Banelco-Pagomiscuentas",
+		"text": "Banelco-Pagomiscuentas"
+	}
+]

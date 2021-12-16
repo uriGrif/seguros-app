@@ -1,0 +1,18 @@
+[
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd5"
+		},
+		"Id": 1,
+		"descripcion": "PersonaFisica",
+		"text": "Persona Fisica"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccd6"
+		},
+		"Id": 2,
+		"descripcion": "PersonaJuridica",
+		"text": "Persona Juridica"
+	}
+]

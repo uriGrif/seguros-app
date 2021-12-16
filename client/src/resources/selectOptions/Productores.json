@@ -1,0 +1,29 @@
+[
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc56"
+		},
+		"Id": 1,
+		"Asegurador": "LUNA",
+		"text": "LUNA",
+		"Matricula": 0
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc57"
+		},
+		"Id": 2,
+		"Asegurador": "ALEJANDRO",
+		"text": "ALEJANDRO",
+		"Matricula": 0
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc58"
+		},
+		"Id": 3,
+		"Asegurador": "LUNA Y ALEJANDRO",
+		"text": "LUNA Y ALEJANDRO",
+		"Matricula": 0
+	}
+]

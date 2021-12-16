@@ -1,0 +1,778 @@
+[
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc59"
+		},
+		"Id": 1,
+		"Riesgo": "ACCIDENTES PERSONALES",
+		"text": "ACCIDENTES PERSONALES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc5a"
+		},
+		"Id": 2,
+		"Riesgo": "C",
+		"text": "C"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc5b"
+		},
+		"Id": 3,
+		"Riesgo": "C2",
+		"text": "C2"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc5c"
+		},
+		"Id": 4,
+		"Riesgo": "C3",
+		"text": "C3"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc5d"
+		},
+		"Id": 5,
+		"Riesgo": "CRISTALES",
+		"text": "CRISTALES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc5e"
+		},
+		"Id": 6,
+		"Riesgo": "DA\u00d1OS POR AGUA",
+		"text": "DA\u00d1OS POR AGUA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc5f"
+		},
+		"Id": 7,
+		"Riesgo": "E1",
+		"text": "E1"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc60"
+		},
+		"Id": 8,
+		"Riesgo": "ELECTRODOMESTICOS",
+		"text": "ELECTRODOMESTICOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc61"
+		},
+		"Id": 9,
+		"Riesgo": "EQ ELECTRONICOS",
+		"text": "EQ ELECTRONICOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc62"
+		},
+		"Id": 10,
+		"Riesgo": "GNC",
+		"text": "GNC"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc63"
+		},
+		"Id": 11,
+		"Riesgo": "GS. EXTRAORDINARIOS",
+		"text": "GS. EXTRAORDINARIOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc64"
+		},
+		"Id": 12,
+		"Riesgo": "INCENDIO CONTENIDO",
+		"text": "INCENDIO CONTENIDO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc65"
+		},
+		"Id": 13,
+		"Riesgo": "INCENDIO EDIFICIO",
+		"text": "INCENDIO EDIFICIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc66"
+		},
+		"Id": 14,
+		"Riesgo": "LB1",
+		"text": "LB1"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc67"
+		},
+		"Id": 15,
+		"Riesgo": "RC ASCENSORES",
+		"text": "RC ASCENSORES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc68"
+		},
+		"Id": 16,
+		"Riesgo": "RC COMPRENSIVA",
+		"text": "RC COMPRENSIVA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc69"
+		},
+		"Id": 17,
+		"Riesgo": "RC HECHOS PRIVADOS",
+		"text": "RC HECHOS PRIVADOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc6a"
+		},
+		"Id": 18,
+		"Riesgo": "RC LINDEROS",
+		"text": "RC LINDEROS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc6b"
+		},
+		"Id": 19,
+		"Riesgo": "REM ESCOMBROS",
+		"text": "REM ESCOMBROS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc6c"
+		},
+		"Id": 20,
+		"Riesgo": "ROBO MOBILIARIO",
+		"text": "ROBO MOBILIARIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc6d"
+		},
+		"Id": 21,
+		"Riesgo": "ROBO Y/O HURTO",
+		"text": "ROBO Y/O HURTO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc6e"
+		},
+		"Id": 22,
+		"Riesgo": "SEGURO TECNICO",
+		"text": "SEGURO TECNICO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc6f"
+		},
+		"Id": 23,
+		"Riesgo": "T.R. C/FCIA. $ 1200",
+		"text": "T.R. C/FCIA. $ 1200"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc70"
+		},
+		"Id": 24,
+		"Riesgo": "TRANSP. TERRESTRE MERCADERIA",
+		"text": "TRANSP. TERRESTRE MERCADERIA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc71"
+		},
+		"Id": 25,
+		"Riesgo": "MALA PRAXIS",
+		"text": "MALA PRAXIS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc72"
+		},
+		"Id": 26,
+		"Riesgo": "H.V.C.T. EDIFICIO",
+		"text": "H.V.C.T. EDIFICIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc73"
+		},
+		"Id": 28,
+		"Riesgo": "B1",
+		"text": "B1"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc74"
+		},
+		"Id": 31,
+		"Riesgo": "ROBO BS. USO",
+		"text": "ROBO BS. USO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc75"
+		},
+		"Id": 32,
+		"Riesgo": "T.R. C/FCIA. $ 1.000",
+		"text": "T.R. C/FCIA. $ 1.000"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc76"
+		},
+		"Id": 33,
+		"Riesgo": "VIDA OBLIGATORIO",
+		"text": "VIDA OBLIGATORIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc77"
+		},
+		"Id": 34,
+		"Riesgo": "C1",
+		"text": "C1"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc78"
+		},
+		"Id": 38,
+		"Riesgo": "DIRECTOR S.A.",
+		"text": "DIRECTOR S.A."
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc79"
+		},
+		"Id": 39,
+		"Riesgo": "ACCESORIOS",
+		"text": "ACCESORIOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc7a"
+		},
+		"Id": 40,
+		"Riesgo": "C FULL",
+		"text": "C FULL"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc7b"
+		},
+		"Id": 49,
+		"Riesgo": "A (RC SOLAMENTE)",
+		"text": "A (RC SOLAMENTE)"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc7c"
+		},
+		"Id": 50,
+		"Riesgo": "CONVENIO MERCANTIL",
+		"text": "CONVENIO MERCANTIL"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc7d"
+		},
+		"Id": 59,
+		"Riesgo": "GARANTIA",
+		"text": "GARANTIA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc7e"
+		},
+		"Id": 61,
+		"Riesgo": "B",
+		"text": "B"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc7f"
+		},
+		"Id": 62,
+		"Riesgo": "ROBO E INCENDIO",
+		"text": "ROBO E INCENDIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc80"
+		},
+		"Id": 63,
+		"Riesgo": "ROBO 1ER.RGO",
+		"text": "ROBO 1ER.RGO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc81"
+		},
+		"Id": 67,
+		"Riesgo": "ROBO DINERO EN CAJA",
+		"text": "ROBO DINERO EN CAJA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc82"
+		},
+		"Id": 68,
+		"Riesgo": "D1",
+		"text": "D1"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc83"
+		},
+		"Id": 69,
+		"Riesgo": "ROBO OBJETOS DIVERSOS",
+		"text": "ROBO OBJETOS DIVERSOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc84"
+		},
+		"Id": 70,
+		"Riesgo": "ASIST. MEDICA FARMA",
+		"text": "ASIST. MEDICA FARMA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc85"
+		},
+		"Id": 71,
+		"Riesgo": "SOCIO GERENTE S.R.L.",
+		"text": "SOCIO GERENTE S.R.L."
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc86"
+		},
+		"Id": 72,
+		"Riesgo": "D3",
+		"text": "D3"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc87"
+		},
+		"Id": 73,
+		"Riesgo": "TODO RIESGO ESPECIFICOS",
+		"text": "TODO RIESGO ESPECIFICOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc88"
+		},
+		"Id": 74,
+		"Riesgo": "BIENES RECIENTEMENTE ADQUIRIDOS",
+		"text": "BIENES RECIENTEMENTE ADQUIRIDOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc89"
+		},
+		"Id": 75,
+		"Riesgo": "REFACCIONES Y AMPLIACIONES",
+		"text": "REFACCIONES Y AMPLIACIONES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc8a"
+		},
+		"Id": 76,
+		"Riesgo": "GASTOS EXTINCION INCENDIO",
+		"text": "GASTOS EXTINCION INCENDIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc8b"
+		},
+		"Id": 77,
+		"Riesgo": "ROBO VALORES EN TRANSITO",
+		"text": "ROBO VALORES EN TRANSITO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc8c"
+		},
+		"Id": 78,
+		"Riesgo": "ROBO ESPECIFICOS",
+		"text": "ROBO ESPECIFICOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc8d"
+		},
+		"Id": 82,
+		"Riesgo": "TRANSPORTES CASCOS",
+		"text": "TRANSPORTES CASCOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc8e"
+		},
+		"Id": 83,
+		"Riesgo": "PRESIDENTE",
+		"text": "PRESIDENTE"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc8f"
+		},
+		"Id": 84,
+		"Riesgo": "VICEPRESIDENTE",
+		"text": "VICEPRESIDENTE"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc90"
+		},
+		"Id": 85,
+		"Riesgo": "RESP.CIVIL CARTELES",
+		"text": "RESP.CIVIL CARTELES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc91"
+		},
+		"Id": 87,
+		"Riesgo": "CONTRATO DE TRABAJO",
+		"text": "CONTRATO DE TRABAJO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc92"
+		},
+		"Id": 88,
+		"Riesgo": "T.R. C/FCIA. $ 1500",
+		"text": "T.R. C/FCIA. $ 1500"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc93"
+		},
+		"Id": 93,
+		"Riesgo": "GERENTE",
+		"text": "GERENTE"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc94"
+		},
+		"Id": 94,
+		"Riesgo": "CORREDOR INMOBILIARIO",
+		"text": "CORREDOR INMOBILIARIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc95"
+		},
+		"Id": 96,
+		"Riesgo": "TR FRANQUICIA $ 3.000",
+		"text": "TR FRANQUICIA $ 3.000"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc96"
+		},
+		"Id": 99,
+		"Riesgo": "VIDA MODULAR",
+		"text": "VIDA MODULAR"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc97"
+		},
+		"Id": 104,
+		"Riesgo": "GRANIZO PARA EDIFICIO",
+		"text": "GRANIZO PARA EDIFICIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc98"
+		},
+		"Id": 105,
+		"Riesgo": "C4",
+		"text": "C4"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc99"
+		},
+		"Id": 110,
+		"Riesgo": "RC PRIVADA",
+		"text": "RC PRIVADA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc9a"
+		},
+		"Id": 112,
+		"Riesgo": "VIDA COLECTIVO",
+		"text": "VIDA COLECTIVO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc9b"
+		},
+		"Id": 115,
+		"Riesgo": "RC",
+		"text": "RC"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc9c"
+		},
+		"Id": 119,
+		"Riesgo": "LB",
+		"text": "LB"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc9d"
+		},
+		"Id": 120,
+		"Riesgo": "T.R. C/FCIA. $ 1800",
+		"text": "T.R. C/FCIA. $ 1800"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc9e"
+		},
+		"Id": 122,
+		"Riesgo": "OBJETOS DIVERSOS",
+		"text": "OBJETOS DIVERSOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcc9f"
+		},
+		"Id": 125,
+		"Riesgo": "INCENDIO ESPECIFICOS",
+		"text": "INCENDIO ESPECIFICOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca0"
+		},
+		"Id": 126,
+		"Riesgo": "HONORARIOS PROFESIONALES",
+		"text": "HONORARIOS PROFESIONALES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca1"
+		},
+		"Id": 128,
+		"Riesgo": "HONORARIO",
+		"text": "HONORARIO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca2"
+		},
+		"Id": 129,
+		"Riesgo": "RC CARTELES",
+		"text": "RC CARTELES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca3"
+		},
+		"Id": 131,
+		"Riesgo": "RECONSTRUCCION ARCHIVOS",
+		"text": "RECONSTRUCCION ARCHIVOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca4"
+		},
+		"Id": 132,
+		"Riesgo": "D4",
+		"text": "D4"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca5"
+		},
+		"Id": 133,
+		"Riesgo": "DINERO EN CAJERO",
+		"text": "DINERO EN CAJERO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca6"
+		},
+		"Id": 134,
+		"Riesgo": "REPOSICION DE DOCUMENTOS",
+		"text": "REPOSICION DE DOCUMENTOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca7"
+		},
+		"Id": 135,
+		"Riesgo": "ALIMENTOS REFRIGERADOS",
+		"text": "ALIMENTOS REFRIGERADOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca8"
+		},
+		"Id": 136,
+		"Riesgo": "DA\u00d1OS ESTETICOS",
+		"text": "DA\u00d1OS ESTETICOS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bcca9"
+		},
+		"Id": 138,
+		"Riesgo": "ALTA GAMA D4",
+		"text": "ALTA GAMA D4"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccaa"
+		},
+		"Id": 141,
+		"Riesgo": "T.R. C/FCIA. $ 2600",
+		"text": "T.R. C/FCIA. $ 2600"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccab"
+		},
+		"Id": 143,
+		"Riesgo": "ROBO EXPENSAS",
+		"text": "ROBO EXPENSAS"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccac"
+		},
+		"Id": 146,
+		"Riesgo": "T.R. C/FCIA. $ 3800",
+		"text": "T.R. C/FCIA. $ 3800"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccad"
+		},
+		"Id": 148,
+		"Riesgo": "INCENDIO MERCADERIA",
+		"text": "INCENDIO MERCADERIA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccae"
+		},
+		"Id": 150,
+		"Riesgo": "ROBO CONTENIDO",
+		"text": "ROBO CONTENIDO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccaf"
+		},
+		"Id": 152,
+		"Riesgo": "RESPONSABILIDAD CIVIL",
+		"text": "RESPONSABILIDAD CIVIL"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb0"
+		},
+		"Id": 155,
+		"Riesgo": "BOLSO",
+		"text": "BOLSO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb1"
+		},
+		"Id": 157,
+		"Riesgo": 0,
+		"text": 0
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb2"
+		},
+		"Id": 158,
+		"Riesgo": "CAUCION",
+		"text": "CAUCION"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb3"
+		},
+		"Id": 159,
+		"Riesgo": "ROBO CAJA FUERTE",
+		"text": "ROBO CAJA FUERTE"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb4"
+		},
+		"Id": 160,
+		"Riesgo": "ROBO",
+		"text": "ROBO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb5"
+		},
+		"Id": 163,
+		"Riesgo": "GASTOS DE ALOJAMIENTO",
+		"text": "GASTOS DE ALOJAMIENTO"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb6"
+		},
+		"Id": 164,
+		"Riesgo": "GASTOS DE MUDANZA",
+		"text": "GASTOS DE MUDANZA"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb7"
+		},
+		"Id": 165,
+		"Riesgo": "INC CONTENIDO PERIODO VACACIONAL",
+		"text": "INC CONTENIDO PERIODO VACACIONAL"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb8"
+		},
+		"Id": 166,
+		"Riesgo": "ROBO PARTES COMUNES",
+		"text": "ROBO PARTES COMUNES"
+	},
+	{
+		"_id": {
+			"$oid": "61415eb1db1a4da1778bccb9"
+		},
+		"Id": 167,
+		"Riesgo": "T",
+		"text": "T"
+	}
+]

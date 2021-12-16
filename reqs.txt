@@ -1,0 +1,14 @@
+Poliza --> riesgos y siniestros en nuevaPoliza y en editar
+
+listados:
+ polizas x mes de vencimiento
+ operaciones x mes (polizas emitidas y renovadas)
+
+Tablas --> hacer descargables como csv
+
+poliza nueva, vencimiento se calcula segun vigencia
+
+renovar:
+ marca como baja, motivo x vencimiento y crea una copia. Hay q cambiar el numero, algun precio. La fecha de inicio es la actual y la de solicitud se marca una semana antes. El vencimiento se calcula segun la vigencia.
+ 
+// para los checkbox, usar toggles tipo switch con un <input type="checkbox" hidden />
