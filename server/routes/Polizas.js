@@ -56,6 +56,43 @@ const foreginKeysLookups = [
 	}
 ];
 
+const projectionObject = {
+	Id: 1,
+	FechaSolicitud: 1,
+	f_Inicio: 1,
+	f_Vencimiento: 1,
+	NroPoliza: 1,
+	idAsegurado: 1,
+	Observaciones: 1,
+	Prima: 1,
+	Premio: 1,
+	Comision: 1,
+	idSeccion: 1,
+	idCompania: 1,
+	idProductor: 1,
+	idVigencia: 1,
+	idMPago: 1,
+	Art: 1,
+	Patrimoniales: 1,
+	Capitas: 1,
+	Siniestros: 1,
+	PatenteVehiculo: 1,
+	ValorAsegurado: 1,
+	RAutomatica: 1,
+	Baja: 1,
+	idMotivoBaja: 1,
+	FechaRegistro: 1,
+	NombreAsegurado: 1,
+	compania: { $arrayElemAt: ["$compania.Compania", 0] },
+	seccion: { $arrayElemAt: ["$seccion.Seccion", 0] },
+	productor: { $arrayElemAt: ["$productor.Productor", 0] },
+	medioDePago: {
+		$arrayElemAt: ["$medioDePago.Descripcion", 0]
+	},
+	vigencia: { $arrayElemAt: ["$vigencia.Vigencia", 0] },
+	motivoBaja: { $arrayElemAt: ["$motivoBaja.MotivoBaja", 0] }
+};
+
 polizasRouter.get("/", (req, res) => {
 	res.send("Router de las polizas");
 });
@@ -86,25 +123,13 @@ polizasRouter.get("/by-asegurado/:aId", async (req, res) => {
 			},
 			...foreginKeysLookups,
 			{
+				$project: projectionObject
+			},
+			{
 				$sort: { f_Inicio: -1 }
 			}
 		]);
 
-		results.map(r => {
-			r.seccion = r.seccion[0] ? r.seccion[0].Seccion : "";
-			r.compania = r.compania[0] ? r.compania[0].Compania : "";
-			r.productor = r.productor[0] ? r.productor[0].Asegurador : "";
-			r.vigencia = r.vigencia[0] ? r.vigencia[0].Vigencia : "";
-			r.medioDePago = r.medioDePago[0]
-				? r.medioDePago[0].Descripcion
-				: "";
-			r.motivoBaja = r.motivoBaja[0] ? r.motivoBaja[0].MotivoBaja : "";
-		});
-
-		// const results = await Poliza.find(
-		// 	{ idAsegurado: mongoose.Types.ObjectId(aseguradoId) },
-		// 	"NroPoliza Observaciones idSeccion f_Inicio f_Vencimiento"
-		// ).sort({ f_Inicio: -1 });
 		res.send(results);
 	} catch (err) {
 		console.error(err);
@@ -170,6 +195,37 @@ polizasRouter.delete("/delete/:id", async (req, res) => {
 	}
 });
 
+polizasRouter.get("/listado-vencimiento", async (req, res) => {
+	const month = req.query.month.toString() || "";
+	const year = req.query.year.toString() || "";
+
+	const from = new Date(year, month - 1, 1).toISOString().split("T")[0];
+	const to = new Date(year, month, 0).toISOString().split("T")[0];
+
+	try {
+		let results = await Poliza.aggregate([
+			{
+				$match: { f_Vencimiento: { $gte: from, $lte: to } }
+			},
+			...foreginKeysLookups,
+			{
+				$project: projectionObject
+			},
+			{
+				$sort: { f_Vencimiento: 1 }
+			}
+		]);
+
+		// const results = await Poliza.find(
+		// 	{ idAsegurado: mongoose.Types.ObjectId(aseguradoId) },
+		// 	"NroPoliza Observaciones idSeccion f_Inicio f_Vencimiento"
+		// ).sort({ f_Inicio: -1 });
+		res.send(results);
+	} catch (err) {
+		console.error(err);
+	}
+});
+
 polizasRouter.get("/:id", async (req, res) => {
 	const id = req.params.id;
 	try {
@@ -181,37 +237,11 @@ polizasRouter.get("/:id", async (req, res) => {
 			},
 			...foreginKeysLookups,
 			{
-				$project: {
-					"seccion.Id": 0,
-					"seccion.rd_id": 0,
-					"compania.Id": 0,
-					"productor.Id": 0,
-					"vigencia.Id": 0,
-					"medioDePago.Id": 0,
-					"motivoBaja.Id": 0
-				}
+				$project: projectionObject
 			}
 		]);
 
-		results = results["0"];
-		results.seccion = results.seccion[0] ? results.seccion[0].Seccion : "";
-		results.compania = results.compania[0]
-			? results.compania[0].Compania
-			: "";
-		results.productor = results.productor[0]
-			? results.productor[0].Asegurador
-			: "";
-		results.vigencia = results.vigencia[0]
-			? results.vigencia[0].Vigencia
-			: "";
-		results.medioDePago = results.medioDePago[0]
-			? results.medioDePago[0].Descripcion
-			: "";
-		results.motivoBaja = results.motivoBaja[0]
-			? results.motivoBaja[0].MotivoBaja
-			: "";
-
-		res.send(results);
+		res.send(results[0]);
 	} catch (err) {
 		console.error(err);
 	}
