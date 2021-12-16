@@ -46,7 +46,7 @@ export const RenovarPoliza = async (id, motivo, nueva) => {
 	try {
 		//dar de baja
 		await EditPoliza(id, { Baja: true, idMotivoBaja: motivo });
-		await CreatePoliza(nueva);
+		return await CreatePoliza(nueva);
 	} catch (error) {
 		console.error(error);
 	}

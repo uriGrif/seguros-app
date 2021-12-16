@@ -14,7 +14,6 @@ const Poliza = () => {
 	const [poliza, setPoliza] = useState({});
 	const [coberturas, setCoberturas] = useState([]);
 	const { id } = useParams();
-	const [fechas, setFechas] = useState({});
 
 	const NOT_DATOS = [
 		"NombreAsegurado",
@@ -44,47 +43,54 @@ const Poliza = () => {
 			await setPoliza(p);
 			const c = await GetCoberturasByPoliza(id);
 			setCoberturas(c);
-
-			// Este bloque setea las fechas necesarias para la renovacion
-			let today = new Date();
-
-			let vigencia = Vigencias.find(v => {
-				if (v._id["$oid"] === p.idVigencia) return v;
-			});
-
-			if (vigencia) {
-				let monthsToAdd = vigencia.Meses;
-				setFechas({
-					f_Inicio: today.toISOString().split("T")[0],
-					FechaSolicitud: new Date(
-						today.getFullYear(),
-						today.getMonth(),
-						today.getDate() - 7
-					)
-						.toISOString()
-						.split("T")[0],
-					f_Vencimiento:
-						monthsToAdd !== 0
-							? new Date(
-									new Date(today).setMonth(
-										new Date(today).getMonth() + monthsToAdd
-									)
-							  )
-									.toISOString()
-									.split("T")[0]
-							: new Date(
-									new Date(today).setDate(
-										new Date(today).getDate() + 1
-									)
-							  )
-									.toISOString()
-									.split("T")[0]
-				});
-			}
 		} catch (err) {
 			console.error(err);
 		}
 	}, []);
+
+	const handleRenovar = () => {
+		// Este bloque setea las fechas necesarias para la renovacion
+
+		let vigencia = Vigencias.find(v => {
+			if (v._id["$oid"] === poliza.idVigencia) return v;
+		});
+
+		let fechaBase = new Date(poliza.f_Vencimiento);
+		let monthsToAdd = vigencia.Meses;
+		const fechas = {
+			f_Inicio: poliza.f_Vencimiento,
+			FechaSolicitud: new Date(
+				fechaBase.getFullYear(),
+				fechaBase.getMonth(),
+				fechaBase.getDate() - 7
+			)
+				.toISOString()
+				.split("T")[0],
+			f_Vencimiento:
+				monthsToAdd !== 0
+					? new Date(
+							new Date(fechaBase).setMonth(
+								new Date(fechaBase).getMonth() + monthsToAdd
+							)
+					  )
+							.toISOString()
+							.split("T")[0]
+					: new Date(
+							new Date(fechaBase).setDate(
+								new Date(fechaBase).getDate() + 1
+							)
+					  )
+							.toISOString()
+							.split("T")[0]
+		};
+
+		let defaultValues = {
+			...poliza,
+			...fechas
+		};
+
+		openModal("renew", "polizas", PolizaFormFields, defaultValues);
+	};
 
 	return (
 		<>
@@ -110,12 +116,7 @@ const Poliza = () => {
 					<i
 						className="fas fa-redo-alt"
 						title="renovar"
-						onClick={() =>
-							openModal("renew", "polizas", PolizaFormFields, {
-								...poliza,
-								...fechas
-							})
-						}
+						onClick={handleRenovar}
 					></i>
 				</div>
 				<div className="main cuadradoAzul">

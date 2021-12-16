@@ -235,6 +235,11 @@ export const CoberturaFormFields = [
 		type: "number"
 	},
 	{
+		label: "Observaciones",
+		name: "Observaciones",
+		type: "text"
+	},
+	{
 		label: "Riesgo",
 		name: "Riesgo",
 		type: "select"

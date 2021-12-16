@@ -115,6 +115,10 @@
 	flex-direction: column;
 }
 
+.polizaTile p {
+	margin: 10px 0;
+}
+
 .coberturaTile {
 	display: flex;
 	flex-direction: column;
@@ -151,4 +155,13 @@
 /* Style your items */
 .my-masonry-grid_column div {
 	margin: 10px !important;
+}
+
+.soloVigentesControl {
+	display: flex;
+	align-items: center;
+}
+
+.soloVigentesControl span {
+	margin-right: 10px;
 }

@@ -5,6 +5,57 @@ const Poliza = require("../models/Poliza");
 
 module.exports = polizasRouter = express.Router();
 
+const foreginKeysLookups = [
+	{
+		$lookup: {
+			from: "Secciones",
+			localField: "idSeccion",
+			foreignField: "_id",
+			as: "seccion"
+		}
+	},
+	{
+		$lookup: {
+			from: "Companias",
+			localField: "idCompania",
+			foreignField: "_id",
+			as: "compania"
+		}
+	},
+	{
+		$lookup: {
+			from: "Productores",
+			localField: "idProductor",
+			foreignField: "_id",
+			as: "productor"
+		}
+	},
+	{
+		$lookup: {
+			from: "Vigencias",
+			localField: "idVigencia",
+			foreignField: "_id",
+			as: "vigencia"
+		}
+	},
+	{
+		$lookup: {
+			from: "MediosDePago",
+			localField: "idMPago",
+			foreignField: "_id",
+			as: "medioDePago"
+		}
+	},
+	{
+		$lookup: {
+			from: "MotivosBaja",
+			localField: "idMotivoBaja",
+			foreignField: "_id",
+			as: "motivoBaja"
+		}
+	}
+];
+
 polizasRouter.get("/", (req, res) => {
 	res.send("Router de las polizas");
 });
@@ -33,31 +84,23 @@ polizasRouter.get("/by-asegurado/:aId", async (req, res) => {
 			{
 				$match: { idAsegurado: mongoose.Types.ObjectId(aseguradoId) }
 			},
-			{
-				$lookup: {
-					from: "Secciones",
-					localField: "idSeccion",
-					foreignField: "_id",
-					as: "seccion"
-				}
-			},
-			{
-				$project: {
-					NroPoliza: 1,
-					Observaciones: 1,
-					seccion: 1,
-					f_Inicio: 1,
-					f_Vencimiento: 1
-				}
-			},
+			...foreginKeysLookups,
 			{
 				$sort: { f_Inicio: -1 }
 			}
 		]);
 
-		results.map(
-			r => (r.seccion = r.seccion[0] ? r.seccion[0].Seccion : "")
-		);
+		results.map(r => {
+			r.seccion = r.seccion[0] ? r.seccion[0].Seccion : "";
+			r.compania = r.compania[0] ? r.compania[0].Compania : "";
+			r.productor = r.productor[0] ? r.productor[0].Asegurador : "";
+			r.vigencia = r.vigencia[0] ? r.vigencia[0].Vigencia : "";
+			r.medioDePago = r.medioDePago[0]
+				? r.medioDePago[0].Descripcion
+				: "";
+			r.motivoBaja = r.motivoBaja[0] ? r.motivoBaja[0].MotivoBaja : "";
+		});
+
 		// const results = await Poliza.find(
 		// 	{ idAsegurado: mongoose.Types.ObjectId(aseguradoId) },
 		// 	"NroPoliza Observaciones idSeccion f_Inicio f_Vencimiento"
@@ -117,56 +160,15 @@ polizasRouter.put("/edit/:id", async (req, res) => {
 	}
 });
 
-const foreginKeysLookups = [
-	{
-		$lookup: {
-			from: "Secciones",
-			localField: "idSeccion",
-			foreignField: "_id",
-			as: "seccion"
-		}
-	},
-	{
-		$lookup: {
-			from: "Companias",
-			localField: "idCompania",
-			foreignField: "_id",
-			as: "compania"
-		}
-	},
-	{
-		$lookup: {
-			from: "Productores",
-			localField: "idProductor",
-			foreignField: "_id",
-			as: "productor"
-		}
-	},
-	{
-		$lookup: {
-			from: "Vigencias",
-			localField: "idVigencia",
-			foreignField: "_id",
-			as: "vigencia"
-		}
-	},
-	{
-		$lookup: {
-			from: "MediosDePago",
-			localField: "idMPago",
-			foreignField: "_id",
-			as: "medioDePago"
-		}
-	},
-	{
-		$lookup: {
-			from: "MotivosBaja",
-			localField: "idMotivoBaja",
-			foreignField: "_id",
-			as: "motivoBaja"
-		}
+polizasRouter.delete("/delete/:id", async (req, res) => {
+	const id = req.params.id;
+	try {
+		const deletedPoliza = await Poliza.findByIdAndDelete(id);
+		res.send(deletedPoliza);
+	} catch (err) {
+		console.error(err);
 	}
-];
+});
 
 polizasRouter.get("/:id", async (req, res) => {
 	const id = req.params.id;

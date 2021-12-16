@@ -8,11 +8,13 @@ import { GetAsegurado } from "../utils/FetchAsegurados";
 import { GetPolizasByAsegurado } from "../utils/FetchPolizas";
 import { useParams } from "react-router-dom";
 import Masonry from "react-masonry-css";
+import Switch from "react-switch";
 
 const Asegurado = () => {
 	const { openModal } = useContext(ModalContext);
 	const [asegurado, setAsegurado] = useState({});
 	const [polizas, setPolizas] = useState([]);
+	const [soloVigentes, setSoloVigentes] = useState(false);
 	const { id } = useParams();
 
 	const today = new Date();
@@ -110,23 +112,35 @@ const Asegurado = () => {
 			<div className="listaPolizas">
 				<h3>Polizas</h3>
 				<div className="polizas">
+					<div className="soloVigentesControl">
+						<span>Mostrar solo vigentes</span>
+						<Switch
+							checked={soloVigentes}
+							onChange={e => setSoloVigentes(e)}
+							onColor="#5e94b1"
+						/>
+					</div>
 					<Masonry
 						breakpointCols={breakpointColumnsObj}
 						className="my-masonry-grid"
 						columnClassName="my-masonry-grid_column"
 					>
-						{polizas.map(p => {
-							return (
-								<PolizaTile
-									id={p._id}
-									NroPoliza={p.NroPoliza}
-									Observaciones={p.Observaciones}
-									f_Inicio={p.f_Inicio}
-									f_Vencimiento={p.f_Vencimiento}
-									key={p._id}
-								/>
-							);
-						})}
+						{polizas
+							.filter(p => {
+								if (soloVigentes) {
+									return !p.Baja;
+								}
+								return true;
+							})
+							.map(p => {
+								return (
+									<PolizaTile
+										id={p._id}
+										poliza={p}
+										key={p._id}
+									/>
+								);
+							})}
 					</Masonry>
 				</div>
 				<div className="controls">
