@@ -22,20 +22,14 @@ const Asegurados = () => {
 		}
 	};
 
+	const handleCreateAsegurado = () => {
+		openModal("create", "asegurados", AseguradoFormFields, {});
+	};
+
 	return (
 		<>
 			<div className="searchForm cuadradoAzul">
-				<Button
-					text="crear nuevo +"
-					onClick={() =>
-						openModal(
-							"create",
-							"asegurados",
-							AseguradoFormFields,
-							{}
-						)
-					}
-				/>
+				<Button text="crear nuevo +" onClick={handleCreateAsegurado} />
 				<h2>Buscar Asegurados</h2>
 				<div>
 					<input

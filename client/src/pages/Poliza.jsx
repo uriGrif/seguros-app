@@ -92,6 +92,20 @@ const Poliza = () => {
 		openModal("renew", "polizas", PolizaFormFields, defaultValues);
 	};
 
+	const handleEdit = () => {
+		openModal("edit", "polizas", PolizaFormFields, poliza);
+	};
+
+	const handleDelete = () => {
+		openModal("delete", "polizas", [], id);
+	};
+
+	const handleCreateCobertura = () => {
+		openModal("create", "coberturas", CoberturaFormFields, {
+			idPoliza: id
+		});
+	};
+
 	return (
 		<>
 			<div className="informacion">
@@ -99,19 +113,12 @@ const Poliza = () => {
 					<i
 						className="fas fa-edit"
 						title="editar"
-						onClick={() =>
-							openModal(
-								"edit",
-								"polizas",
-								PolizaFormFields,
-								poliza
-							)
-						}
+						onClick={handleEdit}
 					></i>
 					<i
 						className="fas fa-trash-alt"
 						title="borrar"
-						onClick={() => openModal("delete", "polizas", [], id)}
+						onClick={handleDelete}
 					></i>
 					<i
 						className="fas fa-redo-alt"
@@ -169,14 +176,7 @@ const Poliza = () => {
 					<i
 						className="fas fa-plus-square"
 						title="agregar nuevo"
-						onClick={() =>
-							openModal(
-								"create",
-								"coberturas",
-								CoberturaFormFields,
-								{ idPoliza: id }
-							)
-						}
+						onClick={handleCreateCobertura}
 					></i>
 				</div>
 			</div>

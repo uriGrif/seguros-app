@@ -49,6 +49,36 @@ const Asegurado = () => {
 		});
 	}, []);
 
+	const handleEdit = () => {
+		openModal("edit", "asegurados", AseguradoFormFields, asegurado);
+	};
+
+	const handleDelete = () => {
+		openModal("delete", "asegurados", [], id);
+	};
+
+	const handleCreatePoliza = () => {
+		openModal("create", "polizas", PolizaFormFields, {
+			idAsegurado: id,
+			NombreAsegurado: asegurado.Asegurado,
+			f_Inicio: today.toISOString().split("T")[0],
+			FechaSolicitud: new Date(
+				today.getFullYear(),
+				today.getMonth(),
+				today.getDate() - 7
+			)
+				.toISOString()
+				.split("T")[0],
+			f_Vencimiento: new Date(
+				today.getFullYear() + 1,
+				today.getMonth(),
+				today.getDate()
+			)
+				.toISOString()
+				.split("T")[0]
+		});
+	};
+
 	return (
 		<>
 			<div className="informacion">
@@ -56,21 +86,12 @@ const Asegurado = () => {
 					<i
 						className="fas fa-edit"
 						title="editar"
-						onClick={() =>
-							openModal(
-								"edit",
-								"asegurados",
-								AseguradoFormFields,
-								asegurado
-							)
-						}
+						onClick={handleEdit}
 					></i>
 					<i
 						className="fas fa-trash-alt"
 						title="borrar"
-						onClick={() =>
-							openModal("delete", "asegurados", [], id)
-						}
+						onClick={handleDelete}
 					></i>
 				</div>
 				<div className="main cuadradoAzul">
@@ -147,27 +168,7 @@ const Asegurado = () => {
 					<i
 						className="fas fa-plus-square"
 						title="agregar nuevo"
-						onClick={() =>
-							openModal("create", "polizas", PolizaFormFields, {
-								idAsegurado: id,
-								NombreAsegurado: asegurado.Asegurado,
-								f_Inicio: today.toISOString().split("T")[0],
-								FechaSolicitud: new Date(
-									today.getFullYear(),
-									today.getMonth(),
-									today.getDate() - 7
-								)
-									.toISOString()
-									.split("T")[0],
-								f_Vencimiento: new Date(
-									today.getFullYear() + 1,
-									today.getMonth(),
-									today.getDate()
-								)
-									.toISOString()
-									.split("T")[0]
-							})
-						}
+						onClick={handleCreatePoliza}
 					></i>
 				</div>
 			</div>

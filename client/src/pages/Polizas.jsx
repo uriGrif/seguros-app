@@ -1,8 +1,6 @@
 import Button from "../components/Button";
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import PolizaSearchResult from "../components/PolizaSearchResult";
-import { PolizaFormFields } from "../resources/FormFields";
-import { ModalContext } from "../contexts/ModalContext";
 import {
 	SearchPolizas,
 	GetPolizasByNumero,
@@ -13,7 +11,6 @@ import { FuzzySearchAsegurados } from "../utils/FetchAsegurados";
 const Polizas = () => {
 	const [polizas, setPolizas] = useState([]);
 	const [showError, setShowError] = useState(false);
-	const { openModal } = useContext(ModalContext);
 	const [inputNro, setInputNro] = useState("");
 	const [inputNombre, setInputNombre] = useState("");
 	const [inputObs, setInputObs] = useState("");
