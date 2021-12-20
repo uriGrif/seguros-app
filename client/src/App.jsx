@@ -9,6 +9,7 @@ import Asegurado from "./pages/Asegurado";
 import Poliza from "./pages/Poliza";
 import Modal from "react-modal";
 import Formulario from "./components/Formulario";
+import Listados from "./pages/Listados";
 import { ModalContext } from "./contexts/ModalContext";
 
 function App() {
@@ -44,6 +45,9 @@ function App() {
 					</Route>
 					<Route path="/polizas/:id">
 						<Poliza />
+					</Route>
+					<Route path="/listados">
+						<Listados />
 					</Route>
 					{/* <Route path="/asegurados" exact>
 					<Asegurados />

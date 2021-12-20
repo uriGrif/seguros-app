@@ -8,6 +8,7 @@ import { GetPoliza } from "../utils/FetchPolizas";
 import Companias from "../resources/selectOptions/Companias.json";
 import { GetCoberturasByPoliza } from "../utils/FetchCoberturas";
 import Vigencias from "../resources/selectOptions/Vigencias.json";
+import { json2csv } from "json-2-csv";
 
 const Poliza = () => {
 	const { openModal } = useContext(ModalContext);
@@ -106,6 +107,19 @@ const Poliza = () => {
 		});
 	};
 
+	const handleCopyCoberturas = () => {
+		json2csv(
+			coberturas,
+			(err, csv) => {
+				if (err) throw err;
+				navigator.clipboard.writeText(csv);
+			},
+			{
+				excludeKeys: ["_id", "idPoliza", "idRiesgo", "Id", "Fecha"]
+			}
+		);
+	};
+
 	return (
 		<>
 			<div className="informacion">
@@ -177,6 +191,11 @@ const Poliza = () => {
 						className="fas fa-plus-square"
 						title="agregar nuevo"
 						onClick={handleCreateCobertura}
+					></i>
+					<i
+						className="fas fa-copy"
+						title="copiar"
+						onClick={handleCopyCoberturas}
 					></i>
 				</div>
 			</div>

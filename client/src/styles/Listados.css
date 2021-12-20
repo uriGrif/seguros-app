@@ -1,0 +1,12 @@
+.listados .cuadradoAzul {
+	margin-bottom: 20px;
+}
+
+.listados input,
+select {
+	margin: 0 10px;
+}
+
+.listados h2 {
+	margin: 0 0 20px 0;
+}

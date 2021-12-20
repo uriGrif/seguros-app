@@ -9,6 +9,7 @@ import { GetPolizasByAsegurado } from "../utils/FetchPolizas";
 import { useParams } from "react-router-dom";
 import Masonry from "react-masonry-css";
 import Switch from "react-switch";
+import { json2csv } from "json-2-csv";
 
 const Asegurado = () => {
 	const { openModal } = useContext(ModalContext);
@@ -77,6 +78,35 @@ const Asegurado = () => {
 				.toISOString()
 				.split("T")[0]
 		});
+	};
+
+	const handleCopyPolizas = () => {
+		const filteredPolizas = polizas.filter(p => {
+			if (soloVigentes) {
+				return !p.Baja;
+			}
+			return true;
+		});
+		json2csv(
+			filteredPolizas,
+			(err, csv) => {
+				if (err) throw err;
+				navigator.clipboard.writeText(csv);
+			},
+			{
+				excludeKeys: [
+					"_id",
+					"idAsegurado",
+					"idMotivoBaja",
+					"Id",
+					"idSeccion",
+					"idCompania",
+					"idProductor",
+					"idVigencia",
+					"idMPago"
+				]
+			}
+		);
 	};
 
 	return (
@@ -169,6 +199,11 @@ const Asegurado = () => {
 						className="fas fa-plus-square"
 						title="agregar nuevo"
 						onClick={handleCreatePoliza}
+					></i>
+					<i
+						className="fas fa-copy"
+						title="copiar"
+						onClick={handleCopyPolizas}
 					></i>
 				</div>
 			</div>

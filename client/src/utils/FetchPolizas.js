@@ -44,9 +44,30 @@ export const DeletePoliza = async id => {
 
 export const RenovarPoliza = async (id, motivo, nueva) => {
 	try {
-		//dar de baja
 		await EditPoliza(id, { Baja: true, idMotivoBaja: motivo });
 		return await CreatePoliza(nueva);
+	} catch (error) {
+		console.error(error);
+	}
+};
+
+export const GetListadoVencimiento = async (month, year) => {
+	try {
+		const res = await fetch(
+			`${BASE_URL}/${PATH}/listado-vencimiento?month=${month}&year=${year}`
+		);
+		return res.json();
+	} catch (error) {
+		console.error(error);
+	}
+};
+
+export const GetListadoOperaciones = async (month, year) => {
+	try {
+		const res = await fetch(
+			`${BASE_URL}/${PATH}/listado-operaciones?month=${month}&year=${year}`
+		);
+		return res;
 	} catch (error) {
 		console.error(error);
 	}

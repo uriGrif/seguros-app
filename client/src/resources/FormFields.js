@@ -109,7 +109,7 @@ export const PolizaFormFields = [
 	{
 		label: "Numero de Poliza",
 		name: "NroPoliza",
-		type: "number"
+		type: "text"
 	},
 	// {
 	// 	label: "idAsegurado",
