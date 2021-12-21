@@ -90,7 +90,9 @@ aseguradosRouter.get("/:id", async (req, res) => {
 		]);
 
 		results = results["0"];
-		results.tipoPersona = results.tipoPersona[0].descripcion;
+		results.tipoPersona = results.tipoPersona[0]
+			? results.tipoPersona[0].descripcion
+			: "";
 
 		res.send(results);
 	} catch (err) {

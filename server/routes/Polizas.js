@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Asegurado = require("../models/Asegurado");
 const Poliza = require("../models/Poliza");
+var json2xls = require("json2xls");
 
 module.exports = polizasRouter = express.Router();
 
@@ -83,6 +84,71 @@ const projectionObject = {
 	idMotivoBaja: 1,
 	FechaRegistro: 1,
 	NombreAsegurado: 1,
+	compania: { $arrayElemAt: ["$compania.Compania", 0] },
+	seccion: { $arrayElemAt: ["$seccion.Seccion", 0] },
+	productor: { $arrayElemAt: ["$productor.Productor", 0] },
+	medioDePago: {
+		$arrayElemAt: ["$medioDePago.Descripcion", 0]
+	},
+	vigencia: { $arrayElemAt: ["$vigencia.Vigencia", 0] },
+	motivoBaja: { $arrayElemAt: ["$motivoBaja.MotivoBaja", 0] }
+};
+
+const listadoVencimientoProjection = {
+	_id: 0,
+	FechaSolicitud: 1,
+	f_Inicio: 1,
+	f_Vencimiento: 1,
+	NroPoliza: 1,
+	Observaciones: 1,
+	Prima: 1,
+	Premio: 1,
+	Comision: 1,
+	Art: 1,
+	Patrimoniales: 1,
+	Capitas: 1,
+	Siniestros: 1,
+	PatenteVehiculo: 1,
+	ValorAsegurado: 1,
+	RAutomatica: 1,
+	Baja: 1,
+	FechaRegistro: 1,
+	NombreAsegurado: 1,
+	compania: { $arrayElemAt: ["$compania.Compania", 0] },
+	seccion: { $arrayElemAt: ["$seccion.Seccion", 0] },
+	productor: { $arrayElemAt: ["$productor.Productor", 0] },
+	medioDePago: {
+		$arrayElemAt: ["$medioDePago.Descripcion", 0]
+	},
+	vigencia: { $arrayElemAt: ["$vigencia.Vigencia", 0] },
+	motivoBaja: { $arrayElemAt: ["$motivoBaja.MotivoBaja", 0] }
+};
+
+const listadoOperacionesProjection = {
+	_id: 0,
+	FechaSolicitud: 1,
+	f_Inicio: 1,
+	f_Vencimiento: 1,
+	NroPoliza: 1,
+	Observaciones: 1,
+	Prima: 1,
+	Premio: 1,
+	Comision: 1,
+	Art: 1,
+	Patrimoniales: 1,
+	Capitas: 1,
+	Siniestros: 1,
+	PatenteVehiculo: 1,
+	ValorAsegurado: 1,
+	RAutomatica: 1,
+	Baja: 1,
+	FechaRegistro: 1,
+	NombreAsegurado: 1,
+	Documento: { $arrayElemAt: ["$asegurado.Documento", 0] },
+	Cuit: { $arrayElemAt: ["$asegurado.Cuit", 0] },
+	Domicilio: { $arrayElemAt: ["$asegurado.Domicilio", 0] },
+	Localidad: { $arrayElemAt: ["$asegurado.Localidad", 0] },
+	CodPostal: { $arrayElemAt: ["$asegurado.CodPostal", 0] },
 	compania: { $arrayElemAt: ["$compania.Compania", 0] },
 	seccion: { $arrayElemAt: ["$seccion.Seccion", 0] },
 	productor: { $arrayElemAt: ["$productor.Productor", 0] },
@@ -209,7 +275,7 @@ polizasRouter.get("/listado-vencimiento", async (req, res) => {
 			},
 			...foreginKeysLookups,
 			{
-				$project: projectionObject
+				$project: listadoVencimientoProjection
 			},
 			{
 				$sort: { f_Vencimiento: 1 }
@@ -221,6 +287,47 @@ polizasRouter.get("/listado-vencimiento", async (req, res) => {
 		// 	"NroPoliza Observaciones idSeccion f_Inicio f_Vencimiento"
 		// ).sort({ f_Inicio: -1 });
 		res.send(results);
+	} catch (err) {
+		console.error(err);
+	}
+});
+
+polizasRouter.use(json2xls.middleware);
+
+polizasRouter.get("/listado-operaciones", async (req, res) => {
+	const month = req.query.month.toString() || "";
+	const year = req.query.year.toString() || "";
+
+	const from = new Date(year, month - 1, 1).toISOString().split("T")[0];
+	const to = new Date().toISOString().split("T")[0];
+
+	try {
+		let results = await Poliza.aggregate([
+			{
+				$match: { FechaSolicitud: { $gte: from, $lte: to } }
+			},
+			{
+				$lookup: {
+					from: "Asegurados",
+					localField: "idAsegurado",
+					foreignField: "_id",
+					as: "asegurado"
+				}
+			},
+			...foreginKeysLookups,
+			{
+				$project: listadoOperacionesProjection
+			},
+			{
+				$sort: { FechaSolicitud: 1 }
+			}
+		]);
+
+		// const results = await Poliza.find(
+		// 	{ idAsegurado: mongoose.Types.ObjectId(aseguradoId) },
+		// 	"NroPoliza Observaciones idSeccion f_Inicio f_Vencimiento"
+		// ).sort({ f_Inicio: -1 });
+		res.xls("operaciones.xlsx", results);
 	} catch (err) {
 		console.error(err);
 	}
