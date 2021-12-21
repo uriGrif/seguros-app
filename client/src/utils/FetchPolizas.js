@@ -1,6 +1,6 @@
 import * as FetchFunctions from "./FetchFunctions";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = import.meta.env.VITE_DOMAIN;
 const PATH = "polizas";
 
 export const GetPoliza = async id => {
@@ -8,19 +8,38 @@ export const GetPoliza = async id => {
 };
 
 export const GetPolizasByAsegurado = async id => {
-	const res = await fetch(`${BASE_URL}/${PATH}/by-asegurado/${id}`);
+	const res = await fetch(`${BASE_URL}/${PATH}/by-asegurado/${id}`, {
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json",
+			authorization: `Bearer ${localStorage.getItem("authToken")}`
+		}
+	});
 	return await res.json();
 };
 
 export const GetPolizasByNombreAsegurado = async nombre => {
 	const res = await fetch(
-		`${BASE_URL}/${PATH}/by-nombre-asegurado/${nombre}`
+		`${BASE_URL}/${PATH}/by-nombre-asegurado/${nombre}`,
+		{
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+				authorization: `Bearer ${localStorage.getItem("authToken")}`
+			}
+		}
 	);
 	return await res.json();
 };
 
 export const GetPolizasByNumero = async num => {
-	const res = await fetch(`${BASE_URL}/${PATH}/by-numero/${num}`);
+	const res = await fetch(`${BASE_URL}/${PATH}/by-numero/${num}`, {
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json",
+			authorization: `Bearer ${localStorage.getItem("authToken")}`
+		}
+	});
 	return await res.json();
 };
 
@@ -54,7 +73,14 @@ export const RenovarPoliza = async (id, motivo, nueva) => {
 export const GetListadoVencimiento = async (month, year) => {
 	try {
 		const res = await fetch(
-			`${BASE_URL}/${PATH}/listado-vencimiento?month=${month}&year=${year}`
+			`${BASE_URL}/${PATH}/listado-vencimiento?month=${month}&year=${year}`,
+			{
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+					authorization: `Bearer ${localStorage.getItem("authToken")}`
+				}
+			}
 		);
 		return res.json();
 	} catch (error) {
@@ -65,7 +91,14 @@ export const GetListadoVencimiento = async (month, year) => {
 export const GetListadoOperaciones = async (month, year) => {
 	try {
 		const res = await fetch(
-			`${BASE_URL}/${PATH}/listado-operaciones?month=${month}&year=${year}`
+			`${BASE_URL}/${PATH}/listado-operaciones?month=${month}&year=${year}`,
+			{
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+					authorization: `Bearer ${localStorage.getItem("authToken")}`
+				}
+			}
 		);
 		return res;
 	} catch (error) {

@@ -8,7 +8,13 @@ export const GetCobertura = async id => {
 };
 
 export const GetCoberturasByPoliza = async id => {
-	const res = await fetch(`${BASE_URL}/${PATH}/by-poliza/${id}`);
+	const res = await fetch(`${BASE_URL}/${PATH}/by-poliza/${id}`, {
+		headers: {
+			"Content-Type": "application/json",
+			Accept: "application/json",
+			authorization: `Bearer ${localStorage.getItem("authToken")}`
+		}
+	});
 	return await res.json();
 };
 
