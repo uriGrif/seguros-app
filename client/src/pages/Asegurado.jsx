@@ -8,7 +8,7 @@ import { GetAsegurado } from "../utils/FetchAsegurados";
 import { GetPolizasByAsegurado } from "../utils/FetchPolizas";
 import { useParams } from "react-router-dom";
 import Masonry from "react-masonry-css";
-import Switch from "react-switch";
+import Switch from "react-switch/dist/react-switch.dev.js"; //https://github.com/vitejs/vite/issues/2139
 import { json2csv } from "json-2-csv";
 
 const Asegurado = () => {
