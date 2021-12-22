@@ -5,7 +5,6 @@ require("dotenv").config();
 const aseguradosRouter = require("./routes/Asegurados");
 const polizasRouter = require("./routes/Polizas");
 const coberturasRouter = require("./routes/Coberturas");
-const globalesRouter = require("./routes/Globales");
 const Auth = require("./middlewares/Auth");
 
 // #region express settings
@@ -46,7 +45,6 @@ app.use(Auth.checkAuth);
 app.use("/asegurados", aseguradosRouter);
 app.use("/polizas", polizasRouter);
 app.use("/coberturas", coberturasRouter);
-app.use("/globales", globalesRouter);
 
 app.listen(PORT, () => {
 	console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
