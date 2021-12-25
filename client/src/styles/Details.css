@@ -116,7 +116,11 @@
 }
 
 .polizaTile p {
-	margin: 10px 0;
+	margin: 5px 0;
+}
+
+.coberturaTile p {
+	margin: 5px 0;
 }
 
 .coberturaTile {

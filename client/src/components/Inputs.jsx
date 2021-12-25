@@ -37,6 +37,7 @@ export const TextInput = ({
 			<input
 				type={type}
 				name={name}
+				step=".001"
 				{...register(name, {
 					valueAsNumber: valueAsNumber,
 					min: 0,

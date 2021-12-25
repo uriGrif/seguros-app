@@ -11,6 +11,11 @@ const Home = () => {
 
 	return (
 		<div className="home">
+			<img
+				src="src/logo-seguros.svg"
+				alt="lunaseguros"
+				className="homeLogo"
+			/>
 			<h1>Bienvenido</h1>
 			<div className="cuadrados">
 				{Object.entries(navItems).map(([k, v]) => {

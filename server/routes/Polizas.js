@@ -96,32 +96,17 @@ const projectionObject = {
 
 const listadoVencimientoProjection = {
 	_id: 0,
-	FechaSolicitud: 1,
 	f_Inicio: 1,
 	f_Vencimiento: 1,
 	NroPoliza: 1,
 	Observaciones: 1,
 	Prima: 1,
 	Premio: 1,
-	Comision: 1,
-	Art: 1,
-	Patrimoniales: 1,
-	Capitas: 1,
-	Siniestros: 1,
-	PatenteVehiculo: 1,
 	ValorAsegurado: 1,
-	RAutomatica: 1,
-	Baja: 1,
-	FechaRegistro: 1,
 	NombreAsegurado: 1,
 	compania: { $arrayElemAt: ["$compania.Compania", 0] },
 	seccion: { $arrayElemAt: ["$seccion.Seccion", 0] },
-	productor: { $arrayElemAt: ["$productor.Productor", 0] },
-	medioDePago: {
-		$arrayElemAt: ["$medioDePago.Descripcion", 0]
-	},
-	vigencia: { $arrayElemAt: ["$vigencia.Vigencia", 0] },
-	motivoBaja: { $arrayElemAt: ["$motivoBaja.MotivoBaja", 0] }
+	productor: { $arrayElemAt: ["$productor.Productor", 0] }
 };
 
 const listadoOperacionesProjection = {

@@ -3,3 +3,5 @@
 .env
 
 mongoimport command.txt
+
+netlify.toml

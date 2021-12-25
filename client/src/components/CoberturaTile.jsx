@@ -8,9 +8,9 @@ const CoberturaTile = ({ cobertura }) => {
 	return (
 		<div className="cuadradoGris coberturaTile">
 			<h3>{cobertura.riesgo}</h3>
+			<p>Valor Asegurado: {cobertura.ValorAsegurado}</p>
 			<p>Observaciones: {cobertura.Observaciones}</p>
 			<p>Endoso: {cobertura.Endoso}</p>
-			<p>Valor Asegurado: {cobertura.ValorAsegurado}</p>
 			<p>Prima: {cobertura.Prima}</p>
 			<p>Premio: {cobertura.Premio}</p>
 			<p>{cobertura.fecha}</p>

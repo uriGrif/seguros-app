@@ -1,4 +1,5 @@
 import * as FetchFunctions from "./FetchFunctions";
+import { GetCoberturasByPoliza, CreateCobertura } from "./FetchCoberturas";
 
 const BASE_URL = import.meta.env.VITE_DOMAIN;
 const PATH = "polizas";
@@ -63,8 +64,17 @@ export const DeletePoliza = async id => {
 
 export const RenovarPoliza = async (id, motivo, nueva) => {
 	try {
+		const coberturas = await GetCoberturasByPoliza(id);
 		await EditPoliza(id, { Baja: true, idMotivoBaja: motivo });
-		return await CreatePoliza(nueva);
+		const newPoliza = await CreatePoliza(nueva);
+		coberturas.forEach(async cobertura => {
+			delete cobertura._id;
+			await CreateCobertura({
+				...cobertura,
+				idPoliza: newPoliza._id
+			});
+		});
+		return newPoliza;
 	} catch (error) {
 		console.error(error);
 	}
