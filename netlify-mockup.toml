@@ -1,0 +1,19 @@
+[build]
+  functions = "./server"
+  publish = "client/dist/"
+  # command = "npm run build-client"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.deploy-preview.environment]
+  DB_URL = "link"
+  PASSWORD = "pswd"
+  JWT_SECRET = "aaaa"
+
+[context.production.environment]
+  DB_URL = "link"
+  PASSWORD = "pswd"
+  JWT_SECRET = "aaaa"

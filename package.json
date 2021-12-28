@@ -1,0 +1,22 @@
+{
+	"name": "SegurosApp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"my-deploy": "cd client && npm run build && cd .. && netlify deploy --prod",
+		"my-deploy-test": "cd client && npm run build && cd .. && netlify deploy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/uriGrif/seguros-app.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/uriGrif/seguros-app/issues"
+	},
+	"homepage": "https://github.com/uriGrif/seguros-app#readme"
+}
