@@ -5,3 +5,5 @@
 mongoimport command.txt
 
 netlify.toml
+# Local Netlify folder
+.netlify

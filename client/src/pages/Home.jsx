@@ -12,7 +12,7 @@ const Home = () => {
 	return (
 		<div className="home">
 			<img
-				src="src/logo-seguros.svg"
+				src="assets/logo-seguros.fe22a235.svg"
 				alt="lunaseguros"
 				className="homeLogo"
 			/>
