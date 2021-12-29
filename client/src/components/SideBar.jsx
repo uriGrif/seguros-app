@@ -1,16 +1,34 @@
 import "../styles/SideBar.css";
 import { NavLink } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 const SideBar = () => {
-	const navItems = {
-		ASEGURADOS: "fa-address-card",
-		POLIZAS: "fa-file-alt",
-		LISTADOS: "fa-chart-bar",
-		COMPAÑIAS: "fa-landmark"
-	};
+	const navItems = [
+		{
+			label: "INICIO",
+			icon: "fa-home",
+			link: "/"
+		},
+		{
+			label: "ASEGURADOS",
+			icon: "fa-address-card",
+			link: "/asegurados"
+		},
+		{
+			label: "POLIZAS",
+			icon: "fa-file-alt",
+			link: "/polizas"
+		},
+		{
+			label: "LISTADOS",
+			icon: "fa-chart-bar",
+			link: "/listados"
+		}
+	];
 
 	const [isOpen, setIsOpen] = useState(false);
+	const { logout } = useContext(AuthContext);
 
 	const handleOpenMenu = () => {
 		if (isOpen) {
@@ -30,35 +48,43 @@ const SideBar = () => {
 				></i>
 				<div className="linkList">
 					{!isOpen &&
-						Object.entries(navItems).map(([k, v]) => {
+						navItems.map(i => {
 							return (
 								<NavLink
-									to={`/${k.toLowerCase()}`}
-									activeClassName="navItemSelected"
-									key={k}
+									key={i.label}
+									to={i.link}
 									className="navItem"
+									activeClassName="navItemSelected"
+									exact={i.link === "/"}
 									onClick={() => setIsOpen(false)}
 								>
-									<i className={`fas ${v}`}></i>
+									<i className={`fas ${i.icon}`}></i>
 								</NavLink>
 							);
 						})}
 					{isOpen &&
-						Object.entries(navItems).map(([k, v]) => {
+						navItems.map(i => {
 							return (
 								<NavLink
-									to={`/${k.toLowerCase()}`}
-									activeClassName="navItemSelected2"
-									key={k}
+									key={i.label}
+									to={i.link}
 									className="navItem"
+									activeClassName="navItemSelected2"
+									exact={i.link === "/"}
 									onClick={() => setIsOpen(false)}
 								>
-									<i className={`fas ${v}`}></i>
-									<p className="sideBarTitle">{k}</p>
+									<i className={`fas ${i.icon}`}></i>
+									{i.label}
 								</NavLink>
 							);
 						})}
 				</div>
+				{isOpen && (
+					<div className="navItem logout" onClick={logout}>
+						<i className="fas fa-sign-out-alt"></i>
+						<p className="sideBarTitle">CERRAR SESION</p>
+					</div>
+				)}
 			</div>
 			{isOpen && (
 				<div className="backgroundDark" onClick={handleOpenMenu}></div>

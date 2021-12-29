@@ -55,9 +55,15 @@ export const AuthProvider = ({ children }) => {
 		setIsLoggedIn(true);
 	};
 
+	const logout = () => {
+		localStorage.removeItem("authToken");
+		setIsLoggedIn(false);
+	};
+
 	const value = {
 		isLoggedIn,
 		login,
+		logout,
 		errorMessage
 	};
 
