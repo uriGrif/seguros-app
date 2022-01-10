@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import Companias from "../resources/selectOptions/Companias.json";
 
 const PolizaTile = ({ id, poliza }) => {
+	const reformatDate = date => {
+		let nums = date.split("-");
+		return `${nums[2]}/${nums[1]}/${nums[0]}`;
+	};
+
 	return (
 		<Link to={`/polizas/${id}`}>
 			<div className="cuadradoGris polizaTile">
@@ -11,8 +16,8 @@ const PolizaTile = ({ id, poliza }) => {
 				<p>Vigencia: {poliza.vigencia}</p>
 				<p>Observaciones: {poliza.Observaciones}</p>
 				<div className="fechas">
-					<p>{poliza.f_Inicio}</p>
-					<p>{poliza.f_Vencimiento}</p>
+					<p>{reformatDate(poliza.f_Inicio)}</p>
+					<p>{reformatDate(poliza.f_Vencimiento)}</p>
 				</div>
 			</div>
 		</Link>

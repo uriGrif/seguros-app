@@ -31,6 +31,8 @@ const Poliza = () => {
 		"NroPoliza"
 	];
 
+	const DATE_FIELDS = ["FechaSolicitud", "f_Inicio", "f_Vencimiento"];
+
 	const breakpointColumnsObj = {
 		default: 5,
 		1100: 3,
@@ -120,6 +122,11 @@ const Poliza = () => {
 		);
 	};
 
+	const reformatDate = date => {
+		let nums = date.split("-");
+		return `${nums[2]}/${nums[1]}/${nums[0]}`;
+	};
+
 	return (
 		<>
 			<div className="informacion">
@@ -160,11 +167,15 @@ const Poliza = () => {
 				</div>
 				<div className="datos cuadradoGris">
 					{Object.entries(poliza).map(([key, value]) => {
+						let v = value;
+						if (DATE_FIELDS.includes(key)) {
+							v = reformatDate(value);
+						}
 						if (!NOT_DATOS.includes(key) && value) {
 							return (
 								<div className="dato" key={key}>
 									<h4>{key}</h4>
-									<p>{value.toString()}</p>
+									<p>{v.toString()}</p>
 								</div>
 							);
 						}

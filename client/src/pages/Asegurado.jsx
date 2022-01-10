@@ -36,6 +36,8 @@ const Asegurado = () => {
 		"TipoPersona"
 	];
 
+	const DATE_FIELDS = ["FechaNacimiento"];
+
 	const breakpointColumnsObj = {
 		default: 6,
 		1100: 4,
@@ -111,6 +113,11 @@ const Asegurado = () => {
 		);
 	};
 
+	const reformatDate = date => {
+		let nums = date.split("-");
+		return `${nums[2]}/${nums[1]}/${nums[0]}`;
+	};
+
 	return (
 		<>
 			<div className="informacion">
@@ -151,11 +158,15 @@ const Asegurado = () => {
 				</div>
 				<div className="datos cuadradoGris">
 					{Object.entries(asegurado).map(([key, value]) => {
+						let v = value;
+						if (DATE_FIELDS.includes(key)) {
+							v = reformatDate(value);
+						}
 						if (!NOT_DATOS.includes(key) && value) {
 							return (
 								<div className="dato" key={key}>
 									<h4>{key}</h4>
-									<p>{value}</p>
+									<p>{v}</p>
 								</div>
 							);
 						}

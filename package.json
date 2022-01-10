@@ -18,5 +18,6 @@
 	"bugs": {
 		"url": "https://github.com/uriGrif/seguros-app/issues"
 	},
-	"homepage": "https://github.com/uriGrif/seguros-app#readme"
+	"homepage": "https://github.com/uriGrif/seguros-app#readme",
+	"dependencies": {}
 }

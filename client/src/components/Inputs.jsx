@@ -1,7 +1,9 @@
 import { selectOptions } from "../resources/FormFields";
 import Vigencias from "../resources/selectOptions/Vigencias.json";
-import Switch from "react-switch";
+import S from "react-switch"; //https://github.com/vitejs/vite/issues/2139
 import { useState } from "react";
+
+const Switch = S.default ? S.default : S;
 
 export const TextInput = ({
 	register,
